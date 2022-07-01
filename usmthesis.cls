@@ -282,8 +282,8 @@
 \usepackage{setspace}
 \RequirePackage[bahasam,english]{babel}
 
-\RequirePackage{scrlfile}                       % Prevent svg (<2.0) package 
-\PreventPackageFromLoading{subfig}              % from loading subfig.
+% \RequirePackage{scrlfile}                       % Prevent svg (<2.0) package 
+% \PreventPackageFromLoading{subfig}              % from loading subfig.
                                                 % See also iss. #13
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
