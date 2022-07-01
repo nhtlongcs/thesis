@@ -282,6 +282,9 @@
 \usepackage{setspace}
 \RequirePackage[bahasam,english]{babel}
 
+\RequirePackage{scrlfile}                       % Prevent svg (<2.0) package 
+\PreventPackageFromLoading{subfig}              % from loading subfig.
+                                                % See also iss. #13
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Default spacing is double.  In your actual content,
@@ -614,7 +617,7 @@ HONORS PROGRAM \\
 \vspace*{70pt}
 
 \fontsize{14pt}{16pt}\selectfont
-\MakeTextUppercase{NGUYỄN TIẾN PHÁT - TRẦN LÊ BÁ THỊNH}
+\MakeTextUppercase{PHẠM MINH KHÔI - NGUYỄN HỒ THĂNG LONG}
 
 \vspace*{80pt}
 \begingroup
