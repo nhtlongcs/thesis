@@ -1,0 +1,54 @@
+\chapter{Thesis Proposal}
+\begin{longtable}{|p{{{80mm}}}|c|}
+\hline
+\multicolumn{2}{|m{\linewidth}|}{\textbf{Thesis title}: Image Captioning with texts }\\
+\hline
+\multicolumn{2}{|m{\linewidth}|}{\textbf{Advisor}: Assoc. Prof. Trần Minh Triết} \\
+\hline
+\multicolumn{2}{|m{\linewidth}|}{\textbf{Duration}: January 14\textsuperscript{nd}, 2021 to June 30\textsuperscript{th}, 2021}\\
+\hline
+\multicolumn{2}{|m{\linewidth}|}{\textbf{Student}: Trần Vinh Hưng (1712060) - Phạm Trọng Thắng (1712760)}\\
+\hline
+
+\hline
+\multicolumn{2}{|m{\linewidth}|}{\textbf{Content}:\par
+% Mục tiêu của thesis này là đề xuất giải pháp cho bài toán sinh ra caption mang text tồn tại trong ảnh sao cho hợp lí và giống con người nhất có thể, bên cạnh khả năng ứng dụng thực tế thì nhóm còn nhắm đến cải thiện kết quả trên sota hiện tại.
+The target of this thesis is to propose approaches to the Image Captioning with Text problem. Given an image as input, our system first must extract the texts from it, then include them in the generated caption such that it is as reasonable and human-like as possible.
+}\\
+\hline
+\multicolumn{2}{|m{\linewidth}|}{\textbf{Methods}:\par
+% Chúng tôi ứng dụng spatial graph cải thiện baseline sẵn có. Sau khi có kết quả, chúng tôi tiếp tục thêm một số bước post process. 
+We leverage the available public features and baseline to improve. There are two features needed for our baseline, those are OCR features and Object features. The old baseline forwards given features into Attention layer, Fusion layer, Transformer layer and then use copy mechanism to generate the output caption. Instead of feed only the raw features, we use Graph Convolution Network to embedded the spatial connection between the OCR and Object features and use that as another feature.
+
+}\\
+\hline
+\multicolumn{2}{|m{\linewidth}|}{\textbf{Results}:\par
+% Với task này, baseline gốc đạt, chúng tôi trong giai đoạn thi TextCaps 2021 đạt kết quả ??? và đạt ??? trong challenge . Các thực nghiệm improve thêm dẫn đến kết quả cuối cùng và đạt ???
+
+}\\
+\hline
+
+\multicolumn{2}{|m{\linewidth}|}{
+\textbf{Research timeline}:
+% - January 2021: Thực hiện học và tìm hiểu các kiến thức nền tảng gồm components, metric cho bài toán Image Captioning
+% - February 2021: Thực hiện survey các model nổi tiếng, tìm hiểu các workshop liên quan và bộ dataset có thể sử dụng được. % - March - April 2021: Tìm hiểu baseline phù hợp, các phương pháp sử dụng trong baseline, các framework hỗ trợ code được baseline. Tiến hành setup môi trường, kiểm tra framework, reimplement baseline và train thử nghiệm. Bên cạnh đó brainstorm ý tưởng có thể improve baseline.
+% - May 2021: tiến hành implement propose methods, train, lấy kết quả, quan sát và xác định các lỗi mang tính pattern. Tham gia TextCaps 2021 và submit kết quả model hiện tại.
+% - June 2021: Hoàn thiện conclusion cho các phương pháp improve chưa thực hiện xong. Thử nghiệm các ý tưởng mới nhằm cải thiện những lỗi mang tính pattern đã xác định. Hoàn thiện kết quả code, demo và đưa ra kết quả cuối cùng.
+
+\begin{itemize}
+    \item January 2021: We searched and studied the background knowledge includes methods, components, metrics used in the Vision and Language task.
+    \item February 2021: We started literature review phase focus on famous approaches. Besides, we also looked for available challenge, workshop and public datasets.
+    \item March - April 2021: For each picked approaches, we looked up for public implementation, also available frameworks in case we need to re-implement baseline. Then, we sought infrastructure for our thesis, set up the environment, and run and evaluated our chosen methods. Finally, we chose the most suitable method for improvement. 
+    \item May 2021: We implemented the proposed method, trained, inferred, observed the results and identified bad results which have pattern. We also participated in the TextCaps Challenge 2021.
+    \item June 2021: We further improved based on the identified errors. Finalizing code, demo and give final result.
+\end{itemize}
+
+
+}\\
+\hline
+
+\makecell[c]{\textbf{Advisor} \\ \includegraphics[height=2.5cm]{abc} \\ Assoc. Prof. Trần Minh Triết } & \makecell[c]{\textbf{December 15\textsuperscript{th}, 2019}\\ \textbf{Author} \\ \includegraphics[height=2.5cm]{abc} \\ Trần Vinh Hưng \\ \includegraphics[height=2.5cm]{abc} \\ Phạm Trọng Thắng} \\ 
+\hline
+\end{longtable}
+
+

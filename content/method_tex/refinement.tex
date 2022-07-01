@@ -1,0 +1,4 @@
+\section{Refinement method}
+\label{sec:refinement}
+In the retrieval module (section \ref{sec:retrieval_model}), we have encoded the visual feature using information from color, vehicle types, and location of the target object. However, we did not exploit the motion features of the tracked objects. Therefore, we build another module to further refine the previously obtained results. In particular, this module focuses on the assessment of similar motion extracted from the query and the video track. The annotation action results of the text are retrieved from the second phase of SRL extraction (section \ref{sec:text_extraction}). Meanwhile, the annotation results of the video action are obtained from the stop and turn detector (section \ref{sec:action_detection}). The retrieval results are refined with the following priorities, i.e., motion, color, and vehicle types. The details of the refinement process are as follows:
+
