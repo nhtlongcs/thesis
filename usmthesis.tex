@@ -191,7 +191,7 @@ bookmarksdepth=section,breaklinks=true]{hyperref}
 % \usepackage{biblatex}
 \usepackage{url}
 \def\UrlBreaks{\do\/\do-}
-\usepackage{breakurl}
+% \usepackage{breakurl}
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -220,10 +220,15 @@ bookmarksdepth=section,breaklinks=true]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MAKE SURE YOU HAVE A acknowledgements.tex FILE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{advisor-comment}
-\include{reviewer-comment}
-\include{acknowledgements}
-\include{syllabus}
+% \include{content/appendices/advisor-comment}
+% \include{content/appendices/reviewer-comment}
+% \include{content/appendices/acknowledgements}
+% \include{content/syllabus}
+
+\import{content/appendices}{advisor-comment.tex}
+\import{content/appendices}{reviewer-comment.tex}
+\import{content/appendices}{acknowledgements.tex}
+\import{content}{syllabus.tex}
 
 \tableofcontents \clearpage
 \listoftables \clearpage
