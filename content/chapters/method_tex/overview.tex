@@ -11,3 +11,6 @@ Given pair of video-text input, Query Analysis and Video Analysis extract appear
 In the first step, not only the textual extraction (module \ref{sec:text_extraction}) aims to localize and obtain the potential attributes of each target vehicle in the given descriptions, but the visual extraction (module \ref{sec:video_extraction}) also provides the same attributes and representation feature based on the vehicle visual context and movement trajectory. 
 Then we utilize a representation learning-based retrieval model \ref{sec:retrieval_model} to produce a list of candidate tracks for each query. 
 The final result is re-ranked by a refinement block \ref{sec:refinement}, using the extracted attributes from previous steps. The overview of our method is explained in Figure \ref{fig:method_overview}.
+
+% Our main proposed method contains two main modules, a reference module and a propagation module.
+
