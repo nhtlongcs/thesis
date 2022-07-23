@@ -1,0 +1,23 @@
+\section{Reference module}
+\label{sec:reference}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{content/resources/new_images/reference.pdf}
+    \caption{The reference module. The semi-supervised technique CPS is applied in both training and inference stage to enhance the precision of model prediction. Strategies are used to smartly choose slices that are informative for the next stage. }
+    \label{fig:reference}
+\end{figure}
+
+
+This module is expected to provide a suggestion of a minimal amount of slices and predicted masks that might contain the most information describing the entire CT Volume. Fig \ref{fig:reference} describes the details of this module.
+
+To utilize the enormous number of unlabeled data, we apply the recent semi-supervised method that performs effectively on several other datasets, which is called Cross Pseudo Supervision (CPS) \cite{cps21chen} (yellow cube in Fig. \ref{fig:reference}).
+CPS enables the usage of unlabeled data by following the dual students technique, where two models are trained simultaneously on labeled data while generating pseudo data for their "peer" to learn. In the testing phase, two models predict the same image, and the result is aggregated by summing up.
+
+We adopt two prominent state-of-the-arts 2D segmentation models with highly different learning paradigms for this CPS framework, which is TransUNet \cite{transunet21chen} and DeeplabV3+ \cite{dlv3p18chen}. While DeeplabV3+ traditionally focuses more on the local information, transformers model the long-range relation, so the cross training can help to learn a unified segmenter with these two properties at the same time. In short, we choose TransUNet and DeeplabV3+ due to their ability to compensate each other for better performance. \cite{crosscnntransformer21luo}
+
+
+% Transformers are a novel architecture that solves sequence to sequence tasks while handling long-range dependencies. Transformers are used standalone or combined with CNN(Convolutional Neural Networks), significantly boosting computer vision tasks
+
+In addition, we also propose a both logical and specialist-based strategy to choose which slices can be further used to boost the performance of the Propagation module. The goal of this action is to preserve only some of the most useful information for the refinement stage.
+
+To elaborate on these strategies, prior to being put into the CPS module for prediction, a small number of slices are uniformly sampled from the processed CT volume. After CPS produces segmentation masks for these slices, another selection step is performed to pick only some of the masks that contain the organs having the largest areas.  

@@ -1,0 +1,6 @@
+\section{Loss functions}
+\label{sec:loss}
+
+For the Reference module, we use the prevalent combination of dice loss and cross entropy loss with smoothing value to alleviate the imbalanced number of the small organs, which occurs due to our splitting into slices process. The same settings are used for CPS in its supervised branch whereas only the dice loss is setup for the unsupervised branch. 
+
+For the Propagation module, we implement the online hard example cross entropy (OhemCE or Bootstrapping CE) \cite{ohemce16wu} and also calculate the Lovasz loss \cite{lovasz18berman} at the same time. OhemCE can help reduce the contribution of background label to the final loss. And since STCN is trained on binary task, OhemCE can direct the model to focus on visible difficult objects. Meanwhile, Lovasz loss is commonly used in the past. 

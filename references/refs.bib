@@ -1,781 +1,909 @@
-% Overview
-% library administration
-@book{eliot2009companion,
-  title={A Companion to the History of the Book},
-  author={Eliot, Simon and Rose, Jonathan},
-  volume={98},
-  year={2009},
-  publisher={John Wiley \& Sons}
-}
-% with many essential milestones
-@article{sanderson2012history,
-  title={The history of information retrieval research},
-  author={Sanderson, Mark and Croft, W Bruce},
-  journal={Proceedings of the IEEE},
-  volume={100},
-  number={Special Centennial Issue},
-  pages={1444--1451},
-  year={2012},
-  publisher={IEEE}
-}
-% Maragos et al.
-@book{maragos2008multimodal,
-  title={Multimodal processing and interaction: audio, video, text},
-  author={Maragos, Petros and Potamianos, Alexandros and Gros, Patrick},
-  volume={33},
-  year={2008},
-  publisher={Springer Science \& Business Media}
-}
-% the user information need
-@inproceedings{culpepper2018research,
-  title={Research frontiers in information retrieval: Report from the third strategic workshop on information retrieval in lorne (swirl 2018)},
-  author={Culpepper, J Shane and Diaz, Fernando and Smucker, Mark D},
-  booktitle={ACM SIGIR Forum},
-  volume={52},
-  number={1},
-  pages={34--90},
-  year={2018},
-  organization={ACM New York, NY, USA}
-}
-% Deep Learning
-@book{goodfellow2016deep,
-  title={Deep learning},
-  author={Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron},
-  year={2016},
-  publisher={MIT press}
-}
-@article{lecun2015deep,
-  title={Deep learning},
-  author={LeCun, Yann and Bengio, Yoshua and Hinton, Geoffrey},
-  journal={nature},
-  volume={521},
-  number={7553},
-  pages={436--444},
-  year={2015},
-  publisher={Nature Publishing Group}
-}
-% Fan et al
-@article{fan2020deep,
-  title={Deep learning for intelligent traffic sensing and prediction: recent advances and future challenges},
-  author={Fan, Xiaochen and Xiang, Chaocan and Gong, Liangyi and He, Xin and Qu, Yuben and Amirgholipour, Saeed and Xi, Yue and Nanda, Priyadarsi and He, Xiangjian},
-  journal={CCF Transactions on Pervasive Computing and Interaction},
-  pages={1--21},
-  year={2020},
-  publisher={Springer}
-}
-% Vehicle Counting
-@inproceedings{lu2021robust,
-  title={Robust and online vehicle counting at crowded intersections},
-  author={Lu, Jincheng and Xia, Meng and Gao, Xu and Yang, Xipeng and Tao, Tianran and Meng, Hao and Zhang, Wei and Tan, Xiao and Shi, Yifeng and Li, Guanbin and others},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={4002--4008},
-  year={2021}
-}
-@article{dai2019video,
-  title={Video-based vehicle counting framework},
-  author={Dai, Zhe and Song, Huansheng and Wang, Xuan and Fang, Yong and Yun, Xu and Zhang, Zhaoyang and Li, Huaiyu},
-  journal={IEEE Access},
-  volume={7},
-  pages={64460--64470},
-  year={2019},
-  publisher={IEEE}
-}
-@inproceedings{asha2018vehicle,
-  title={Vehicle counting for traffic management system using YOLO and correlation filter},
-  author={Asha, CS and Narasimhadhan, AV},
-  booktitle={2018 IEEE International Conference on Electronics, Computing and Communication Technologies (CONECCT)},
-  pages={1--6},
-  year={2018},
-  organization={IEEE}
-}
-% Vehicle Reidentification
-@inproceedings{luo2021empirical,
-  title={An empirical study of vehicle re-identification on the AI City Challenge},
-  author={Luo, Hao and Chen, Weihua and Xu, Xianzhe and Gu, Jianyang and Zhang, Yuqi and Liu, Chong and Jiang, Yiqi and He, Shuting and Wang, Fan and Li, Hao},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={4095--4102},
-  year={2021}
-}
-@InProceedings{Khorramshahi_2019_ICCV,
-author = {Khorramshahi, Pirazh and Kumar, Amit and Peri, Neehar and Rambhatla, Sai Saketh and Chen, Jun-Cheng and Chellappa, Rama},
-title = {A Dual-Path Model With Adaptive Attention for Vehicle Re-Identification},
-booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-month = {October},
-year = {2019}
-}
-@article{zhu2019vehicle,
-  title={Vehicle re-identification using quadruple directional deep learning features},
-  author={Zhu, Jianqing and Zeng, Huanqiang and Huang, Jingchang and Liao, Shengcai and Lei, Zhen and Cai, Canhui and Zheng, Lixin},
-  journal={IEEE Transactions on Intelligent Transportation Systems},
-  volume={21},
-  number={1},
-  pages={410--420},
-  year={2019},
-  publisher={IEEE}
-}
-% AI City Challenge
-@inproceedings{Naphade17AIC17,
-author={Milind Naphade and David C. Anastasiu and Anuj Sharma and Vamsi Jagrlamudi and Hyeran Jeon and Kaikai Liu and Ming-Ching Chang and Siwei Lyu and Zeyu Gao},
-title={The NVIDIA AI City Challenge},
-booktitle = {Prof. SmartWorld},
-address = {Santa Clara, CA, USA},
-year = 2017
-}
-@inproceedings{Naphade18AIC18,
-author={Milind Naphade and Ming-Ching Chang and Anuj Sharma and David C. Anastasiu and Vamsi Jagarlamudi and Pranamesh Chakraborty and Tingting Huang and Shuo Wang and Ming-Yu Liu and Rama Chellappa and Jenq-Neng Hwang and Siwei Lyu},
-title = {The 2018 NVIDIA AI City Challenge},
-booktitle = {Proc. CVPR Workshops},
-pages = {53-–60}, 
-year = 2018
-}
-@InProceedings{Naphade19AIC19,
-author = {Milind Naphade and Zheng Tang and Ming-Ching Chang and David C. Anastasiu and Anuj Sharma and Rama Chellappa and Shuo Wang and Pranamesh Chakraborty and Tingting Huang and Jenq-Neng Hwang and Siwei Lyu},
-title = {The 2019 AI City Challenge},
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
-month = {June},
-year = {2019},
-pages = {452–460}
-}
-@InProceedings{Naphade20AIC20,
-author = {Milind Naphade and Shuo Wang and David C. Anastasiu and Zheng Tang and Ming-Ching Chang and Xiaodong Yang and Liang Zheng and Anuj Sharma and Rama Chellappa and Pranamesh Chakraborty},
-title = {The 4th AI City Challenge},
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
-month = {June},
-year = {2020},
-pages = {2665–2674}
-}
-@InProceedings{Naphade21AIC21,
-author = {Milind Naphade and Shuo Wang and David C. Anastasiu and Zheng Tang and Ming-Ching Chang and Xiaodong Yang and Yue Yao and Liang Zheng and Pranamesh Chakraborty and Christian E. Lopez and Anuj Sharma and Qi Feng and Vitaly Ablavsky and Stan Sclaroff},
-title = {The 5th AI City Challenge},
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
-month = {June},
-year = {2021},
-}
-% labeled datasets
-@InProceedings{Feng21CityFlowNL,
-author={Qi Feng and Vitaly Ablavsky and Stan Sclaroff},
-title = {CityFlow-NL: Tracking and Retrieval of Vehicles at City Scale by Natural Language Descriptions},
-howpublished = {arXiv:2101.04741},
-year = {2021}
-}
-@InProceedings{Tang19CityFlow,
-author = {Zheng Tang and Milind Naphade and Ming-Yu Liu and Xiaodong Yang and Stan Birchfield and Shuo Wang and Ratnesh Kumar and David Anastasiu and Jenq-Neng Hwang},
-title = {CityFlow: A City-Scale Benchmark for Multi-Target Multi-Camera Vehicle Tracking and Re-Identification},
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2019},
-pages = {8797–8806}
-}
-@InProceedings{Yao20VehicleX,
-author={Yue Yao and Liang Zheng and Xiaodong Yang and Milind Naphade and Tom Gedeon},
-title = {Simulating Content Consistent Vehicle Datasets with Attribute Descent},
-booktitle = {The European Conference on Computer Vision (ECCV)},
-month = {August},
-year = {2020},
-pages = {775–791}
-} 
-% -------------------------------------------------
-% Background/Sequence model
-% NMT
-@article{sutskever2014sequence,
-  title={Sequence to sequence learning with neural networks},
-  author={Sutskever, Ilya and Vinyals, Oriol and Le, Quoc V},
-  journal={arXiv preprint arXiv:1409.3215},
-  year={2014}
-}
-%Luong et al
-@article{luong2015effective,
-  title={Effective approaches to attention-based neural machine translation},
-  author={Luong, Minh-Thang and Pham, Hieu and Manning, Christopher D},
-  journal={arXiv preprint arXiv:1508.04025},
-  year={2015}
-}
-% bahdanau et al
-@article{bahdanau2014neural,
-  title={Neural machine translation by jointly learning to align and translate},
-  author={Bahdanau, Dzmitry and Cho, Kyunghyun and Bengio, Yoshua},
-  journal={arXiv preprint arXiv:1409.0473},
-  year={2014}
-}
-% Attention is all you need
-@inproceedings{vaswani2017attention,
-  title={Attention is all you need},
-  author={Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
-  booktitle={Advances in neural information processing systems},
-  pages={5998--6008},
-  year={2017}
-}
-% 
+% METHODS
 
-% -------------------------------------------------
-% Object detection
-% Faster RCNN
-@inproceedings{NIPS2015_14bfa6bb,
- author = {Ren, Shaoqing and He, Kaiming and Girshick, Ross and Sun, Jian},
- booktitle = {Advances in Neural Information Processing Systems},
- editor = {C. Cortes and N. Lawrence and D. Lee and M. Sugiyama and R. Garnett},
- pages = {},
- publisher = {Curran Associates, Inc.},
- title = {Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks},
- url = {https://proceedings.neurips.cc/paper/2015/file/14bfa6bb14875e45bba028a21ed38046-Paper.pdf},
- volume = {28},
- year = {2015}
+
+
+
+% SEMI-SUPERVISED LEARNING
+
+@article{kim2020structuredloss,
+  author    = {Jongmok Kim and
+               Jooyoung Jang and
+               Hyunwoo Park},
+  title     = {Structured Consistency Loss for semi-supervised semantic segmentation},
+  journal   = {CoRR},
+  volume    = {abs/2001.04647},
+  year      = {2020},
+  url       = {https://arxiv.org/abs/2001.04647},
+  eprinttype = {arXiv},
+  eprint    = {2001.04647},
+  timestamp = {Fri, 17 Jan 2020 14:07:30 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2001-04647.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
-% -------------------------------------------------
-% Language modeling
-@article{dai2015semi,
-  title={Semi-supervised sequence learning},
-  author={Dai, Andrew M and Le, Quoc V},
-  journal={Advances in neural information processing systems},
-  volume={28},
-  pages={3079--3087},
-  year={2015}
-}
-% BERT
-@article{devlin2018bert,
-  title={Bert: Pre-training of deep bidirectional transformers for language understanding},
-  author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
-  journal={arXiv preprint arXiv:1810.04805},
-  year={2018}
-}
-% RoBERTa
-@article{liu2019roberta,
-  title={Roberta: A robustly optimized bert pretraining approach},
-  author={Liu, Yinhan and Ott, Myle and Goyal, Naman and Du, Jingfei and Joshi, Mandar and Chen, Danqi and Levy, Omer and Lewis, Mike and Zettlemoyer, Luke and Stoyanov, Veselin},
-  journal={arXiv preprint arXiv:1907.11692},
-  year={2019}
-}
-%ELMo
-@article{peters2018deep,
-  title={Deep contextualized word representations},
-  author={Peters, Matthew E and Neumann, Mark and Iyyer, Mohit and Gardner, Matt and Clark, Christopher and Lee, Kenton and Zettlemoyer, Luke},
-  journal={arXiv preprint arXiv:1802.05365},
-  year={2018}
-}
-% GPT
-@article{radford2018improving,
-  title={Improving language understanding by generative pre-training},
-  author={Radford, Alec and Narasimhan, Karthik and Salimans, Tim and Sutskever, Ilya},
-  year={2018}
-}
-% WordPiecing
-@article{wu2016google,
-  title={Google's neural machine translation system: Bridging the gap between human and machine translation},
-  author={Wu, Yonghui and Schuster, Mike and Chen, Zhifeng and Le, Quoc V and Norouzi, Mohammad and Macherey, Wolfgang and Krikun, Maxim and Cao, Yuan and Gao, Qin and Macherey, Klaus and others},
-  journal={arXiv preprint arXiv:1609.08144},
-  year={2016}
-}
-% summarization 1
-@inproceedings{jadhav2018extractive,
-  title={Extractive summarization with swap-net: Sentences and words from alternating pointer networks},
-  author={Jadhav, Aishwarya and Rajan, Vaibhav},
-  booktitle={Proceedings of the 56th annual meeting of the association for computational linguistics (volume 1: Long papers)},
-  pages={142--151},
-  year={2018}
-}
-% summarization 2
-@inproceedings{liu2018generative,
-  title={Generative adversarial network for abstractive text summarization},
-  author={Liu, Linqing and Lu, Yao and Yang, Min and Qu, Qiang and Zhu, Jia and Li, Hongyan},
-  booktitle={Thirty-second AAAI conference on artificial intelligence},
-  year={2018}
-}
-%paraphrase generation-1
-@article{wieting2017paranmt,
-  title={ParaNMT-50M: Pushing the limits of paraphrastic sentence embeddings with millions of machine translations},
-  author={Wieting, John and Gimpel, Kevin},
-  journal={arXiv preprint arXiv:1711.05732},
-  year={2017}
-}
-% name entity -1 
-@article{baevski2019cloze,
-  title={Cloze-driven pretraining of self-attention networks},
-  author={Baevski, Alexei and Edunov, Sergey and Liu, Yinhan and Zettlemoyer, Luke and Auli, Michael},
-  journal={arXiv preprint arXiv:1903.07785},
-  year={2019}
-}
-% name entity -2
-@article{strakova2019neural,
-  title={Neural architectures for nested NER through linearization},
-  author={Strakov{\'a}, Jana and Straka, Milan and Haji{\v{c}}, Jan},
-  journal={arXiv preprint arXiv:1908.06926},
+
+@article{french2019semi,
+  title={Semi-supervised semantic segmentation needs strong, high-dimensional perturbations},
+  author={French, Geoff and Aila, Timo and Laine, Samuli and Mackiewicz, Michal and Finlayson, Graham},
   year={2019}
 }
 
-% -------------------------------------------------
-% Related works/MOT
-% video-text retrieval
-% image-text
-%%%% captioning
-@inproceedings{vinyals2015show,
-  title={Show and tell: A neural image caption generator},
-  author={Vinyals, Oriol and Toshev, Alexander and Bengio, Samy and Erhan, Dumitru},
-  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
-  pages={3156--3164},
-  year={2015}
-}
-@inproceedings{xu2015show,
-  title={Show, attend and tell: Neural image caption generation with visual attention},
-  author={Xu, Kelvin and Ba, Jimmy and Kiros, Ryan and Cho, Kyunghyun and Courville, Aaron and Salakhudinov, Ruslan and Zemel, Rich and Bengio, Yoshua},
-  booktitle={International conference on machine learning},
-  pages={2048--2057},
-  year={2015},
-  organization={PMLR}
-}
-%%%% captioning + vqa
-@inproceedings{anderson2018bottom,
-  title={Bottom-up and top-down attention for image captioning and visual question answering},
-  author={Anderson, Peter and He, Xiaodong and Buehler, Chris and Teney, Damien and Johnson, Mark and Gould, Stephen and Zhang, Lei},
-  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
-  pages={6077--6086},
-  year={2018}
-}
-%%%% vqa
-@inproceedings{xu2016ask,
-  title={Ask, attend and answer: Exploring question-guided spatial attention for visual question answering},
-  author={Xu, Huijuan and Saenko, Kate},
-  booktitle={European Conference on Computer Vision},
-  pages={451--466},
-  year={2016},
-  organization={Springer}
-}
-@inproceedings{goyal2017making,
-  title={Making the v in vqa matter: Elevating the role of image understanding in visual question answering},
-  author={Goyal, Yash and Khot, Tejas and Summers-Stay, Douglas and Batra, Dhruv and Parikh, Devi},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  pages={6904--6913},
-  year={2017}
+@article{zheng2021rectifying,
+  author    = {Zhedong Zheng and
+               Yi Yang},
+  title     = {Rectifying Pseudo Label Learning via Uncertainty Estimation for Domain
+               Adaptive Semantic Segmentation},
+  journal   = {Int. J. Comput. Vis.},
+  volume    = {129},
+  number    = {4},
+  pages     = {1106--1120},
+  year      = {2021},
+  url       = {https://doi.org/10.1007/s11263-020-01395-y},
+  doi       = {10.1007/s11263-020-01395-y},
+  timestamp = {Wed, 27 Oct 2021 12:33:55 +0200},
+  biburl    = {https://dblp.org/rec/journals/ijcv/ZhengY21.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
-%%%%% Image-text retrieval
-@inproceedings{vo2019composing,
-  title={Composing text and image for image retrieval-an empirical odyssey},
-  author={Vo, Nam and Jiang, Lu and Sun, Chen and Murphy, Kevin and Li, Li-Jia and Fei-Fei, Li and Hays, James},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={6439--6448},
-  year={2019}
+
+@inproceedings{chen2020naivestudent
+  author    = {Liang{-}Chieh Chen and
+               Raphael Gontijo Lopes and
+               Bowen Cheng and
+               Maxwell D. Collins and
+               Ekin D. Cubuk and
+               Barret Zoph and
+               Hartwig Adam and
+               Jonathon Shlens},
+  editor    = {Andrea Vedaldi and
+               Horst Bischof and
+               Thomas Brox and
+               Jan{-}Michael Frahm},
+  title     = {Naive-Student: Leveraging Semi-Supervised Learning in Video Sequences
+               for Urban Scene Segmentation},
+  booktitle = {Computer Vision - {ECCV} 2020 - 16th European Conference, Glasgow,
+               UK, August 23-28, 2020, Proceedings, Part {IX}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {12354},
+  pages     = {695--714},
+  publisher = {Springer},
+  year      = {2020},
+  url       = {https://doi.org/10.1007/978-3-030-58545-7\_40},
+  doi       = {10.1007/978-3-030-58545-7\_40},
+  timestamp = {Thu, 05 Nov 2020 14:01:21 +0100},
+  biburl    = {https://dblp.org/rec/conf/eccv/ChenLCCCZAS20.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
-@article{radenovic2018fine,
-  title={Fine-tuning CNN image retrieval with no human annotation},
-  author={Radenovi{\'c}, Filip and Tolias, Giorgos and Chum, Ond{\v{r}}ej},
+
+@article{zhu2020improving,
+  author    = {Yi Zhu and
+               Zhongyue Zhang and
+               Chongruo Wu and
+               Zhi Zhang and
+               Tong He and
+               Hang Zhang and
+               R. Manmatha and
+               Mu Li and
+               Alexander J. Smola},
+  title     = {Improving Semantic Segmentation via Self-Training},
+  journal   = {CoRR},
+  volume    = {abs/2004.14960},
+  year      = {2020},
+  url       = {https://arxiv.org/abs/2004.14960},
+  eprinttype = {arXiv},
+  eprint    = {2004.14960},
+  timestamp = {Tue, 22 Sep 2020 08:08:20 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2004-14960.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{zoph2020rethinking
+  author    = {Barret Zoph and
+               Golnaz Ghiasi and
+               Tsung{-}Yi Lin and
+               Yin Cui and
+               Hanxiao Liu and
+               Ekin Dogus Cubuk and
+               Quoc Le},
+  editor    = {Hugo Larochelle and
+               Marc'Aurelio Ranzato and
+               Raia Hadsell and
+               Maria{-}Florina Balcan and
+               Hsuan{-}Tien Lin},
+  title     = {Rethinking Pre-training and Self-training},
+  booktitle = {Advances in Neural Information Processing Systems 33: Annual Conference
+               on Neural Information Processing Systems 2020, NeurIPS 2020, December
+               6-12, 2020, virtual},
+  year      = {2020},
+  url       = {https://proceedings.neurips.cc/paper/2020/hash/27e9661e033a73a6ad8cefcde965c54d-Abstract.html},
+  timestamp = {Tue, 19 Jan 2021 15:57:00 +0100},
+  biburl    = {https://dblp.org/rec/conf/nips/ZophGLCLC020.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{feng2020semi,
+  title={Semi-supervised semantic segmentation via dynamic self-training and classbalanced curriculum},
+  author={Feng, Zhengyang and Zhou, Qianyu and Cheng, Guangliang and Tan, Xin and Shi, Jianping and Ma, Lizhuang},
+  journal={arXiv preprint arXiv:2004.08514},
+  volume={1},
+  number={2},
+  pages={5},
+  year={2020}
+}
+
+@article{hung2018adversarial,
+  title={Adversarial learning for semi-supervised semantic segmentation},
+  author={Hung, Wei-Chih and Tsai, Yi-Hsuan and Liou, Yan-Ting and Lin, Yen-Yu and Yang, Ming-Hsuan},
+  journal={arXiv preprint arXiv:1802.07934},
+  year={2018}
+}
+
+@article{mittal2019semi,
+  title={Semi-supervised semantic segmentation with high-and low-level consistency},
+  author={Mittal, Sudhanshu and Tatarchenko, Maxim and Brox, Thomas},
   journal={IEEE transactions on pattern analysis and machine intelligence},
-  volume={41},
-  number={7},
-  pages={1655--1668},
-  year={2018},
+  volume={43},
+  number={4},
+  pages={1369--1379},
+  year={2019},
   publisher={IEEE}
 }
-@inproceedings{revaud2019learning,
-  title={Learning with average precision: Training image retrieval with a listwise loss},
-  author={Revaud, Jerome and Almaz{\'a}n, Jon and Rezende, Rafael S and Souza, Cesar Roberto de},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  pages={5107--5116},
-  year={2019}
-}
-% ---------------------------------------------
-% Video-text retrieval
-% top_1/33
-@inproceedings{mithun2018learning,
-  title={Learning joint embedding with multimodal cues for cross-modal video-text retrieval},
-  author={Mithun, Niluthpol Chowdhury and Li, Juncheng and Metze, Florian and Roy-Chowdhury, Amit K},
-  booktitle={Proceedings of the 2018 ACM on International Conference on Multimedia Retrieval},
-  pages={19--27},
-  year={2018}
-}
-%top_1/8
-@inproceedings{dong2019dual,
-  title={Dual encoding for zero-example video retrieval},
-  author={Dong, Jianfeng and Li, Xirong and Xu, Chaoxi and Ji, Shouling and He, Yuan and Yang, Gang and Wang, Xun},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={9346--9355},
-  year={2019}
-}
-%top_1/31
-@article{miech2018learning,
-  title={Learning a text-video embedding from incomplete and heterogeneous data},
-  author={Miech, Antoine and Laptev, Ivan and Sivic, Josef},
-  journal={arXiv preprint arXiv:1804.02516},
-  year={2018}
-}
-%top_1/23
-@inproceedings{lin2014visual,
-  title={Visual semantic search: Retrieving videos via complex textual queries},
-  author={Lin, Dahua and Fidler, Sanja and Kong, Chen and Urtasun, Raquel},
-  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
-  pages={2657--2664},
-  year={2014}
-}
-%top_1/60
-@inproceedings{yu2017end,
-  title={End-to-end concept word detection for video captioning, retrieval, and question answering},
-  author={Yu, Youngjae and Ko, Hyungjin and Choi, Jongwook and Kim, Gunhee},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  pages={3165--3173},
-  year={2017}
-}
-%word2vec
-@misc{mikolov2013efficient,
-      title={Efficient Estimation of Word Representations in Vector Space}, 
-      author={Tomas Mikolov and Kai Chen and Greg Corrado and Jeffrey Dean},
-      year={2013},
-      eprint={1301.3781},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-% GloVe
-@inproceedings{pennington2014glove,
-  title={Glove: Global vectors for word representation},
-  author={Pennington, Jeffrey and Socher, Richard and Manning, Christopher D},
-  booktitle={Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP)},
-  pages={1532--1543},
-  year={2014}
-}
-% LSTM
-@article{hochreiter1997long,
-  title={Long short-term memory},
-  author={Hochreiter, Sepp and Schmidhuber, J{\"u}rgen},
-  journal={Neural computation},
-  volume={9},
-  number={8},
-  pages={1735--1780},
-  year={1997},
-  publisher={MIT Press}
-}
-% GRU
-@article{cho2014learning,
-  title={Learning phrase representations using RNN encoder-decoder for statistical machine translation},
-  author={Cho, Kyunghyun and Van Merri{\"e}nboer, Bart and Gulcehre, Caglar and Bahdanau, Dzmitry and Bougares, Fethi and Schwenk, Holger and Bengio, Yoshua},
-  journal={arXiv preprint arXiv:1406.1078},
-  year={2014}
+
+@inproceedings{ibrahim2020semisupervised,
+  author    = {Mostafa S. Ibrahim and
+               Arash Vahdat and
+               Mani Ranjbar and
+               William G. Macready},
+  title     = {Semi-Supervised Semantic Image Segmentation With Self-Correcting Networks},
+  booktitle = {2020 {IEEE/CVF} Conference on Computer Vision and Pattern Recognition,
+               {CVPR} 2020, Seattle, WA, USA, June 13-19, 2020},
+  pages     = {12712--12722},
+  publisher = {Computer Vision Foundation / {IEEE}},
+  year      = {2020},
+  url       = {https://openaccess.thecvf.com/content\_CVPR\_2020/html/Ibrahim\_Semi-Supervised\_Semantic\_Image\_Segmentation\_With\_Self-Correcting\_Networks\_CVPR\_2020\_paper.html},
+  doi       = {10.1109/CVPR42600.2020.01273},
+  timestamp = {Tue, 31 Aug 2021 14:00:04 +0200},
+  biburl    = {https://dblp.org/rec/conf/cvpr/IbrahimVRM20.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
-%COOT
-@inproceedings{ging2020coot,
-  title={COOT: Cooperative Hierarchical Transformer for Video-Text Representation Learning},
-  author={Simon Ging and Mohammadreza Zolfaghari and Hamed Pirsiavash and Thomas Brox},
-  booktitle={Advances on Neural Information Processing Systems (NeurIPS)},
-  year={2020}
-}
-% Feng et al
-@article{feng2020exploiting,
-  title={Exploiting visual semantic reasoning for video-text retrieval},
-  author={Feng, Zerun and Zeng, Zhimin and Guo, Caili and Li, Zheng},
-  journal={arXiv preprint arXiv:2006.08889},
-  year={2020}
-}
-% Zhang et al
-@inproceedings{zhang2018cross,
-  title={Cross-modal and hierarchical modeling of video and text},
-  author={Zhang, Bowen and Hu, Hexiang and Sha, Fei},
-  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
-  pages={374--390},
-  year={2018}
-}
-% MILNCE
-@inproceedings{miech2020end,
-  title={End-to-end learning of visual representations from uncurated instructional videos},
-  author={Miech, Antoine and Alayrac, Jean-Baptiste and Smaira, Lucas and Laptev, Ivan and Sivic, Josef and Zisserman, Andrew},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={9879--9889},
-  year={2020}
-}
-% C3D
-@inproceedings{carreira2017quo,
-  title={Quo vadis, action recognition? a new model and the kinetics dataset},
-  author={Carreira, Joao and Zisserman, Andrew},
-  booktitle={proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  pages={6299--6308},
-  year={2017}
-}
-% S3D
-@inproceedings{xie2018rethinking,
-  title={Rethinking spatiotemporal feature learning: Speed-accuracy trade-offs in video classification},
-  author={Xie, Saining and Sun, Chen and Huang, Jonathan and Tu, Zhuowen and Murphy, Kevin},
-  booktitle={Proceedings of the European conference on computer vision (ECCV)},
-  pages={305--321},
-  year={2018}
-}
-% w2vv++
-@inproceedings{li2019w2vv++,
-  title={W2vv++ fully deep learning for ad-hoc video search},
-  author={Li, Xirong and Xu, Chaoxi and Yang, Gang and Chen, Zhineng and Dong, Jianfeng},
-  booktitle={Proceedings of the 27th ACM International Conference on Multimedia},
-  pages={1786--1794},
-  year={2019}
-}
-% ---------------------------------------------
-% About the AI City
-% the 5th AI City Challenge
-
-% top_1
-@inproceedings{bai2021connecting,
-  title={Connecting language and vision for natural language-based vehicle retrieval},
-  author={Bai, Shuai and Zheng, Zhedong and Wang, Xiaohan and Lin, Junyang and Zhang, Zhu and Zhou, Chang and Yang, Hongxia and Yang, Yi},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={4034--4043},
-  year={2021}
-}
-% top_2
-@inproceedings{sun2021dun,
-  title={DUN: Dual-path temporal matching network for natural language-based vehicle retrieval},
-  author={Sun, Ziruo and Liu, Xinfang and Bi, Xiaopeng and Nie, Xiushan and Yin, Yilong},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={4061--4067},
-  year={2021}
-}
-% top_3
-@inproceedings{park2021keyword,
-  title={Keyword-based vehicle retrieval},
-  author={Park, Eun-Ju and Kim, Hoyoung and Jeong, Seonghwan and Kang, Byungkon and Kwon, YoungMin},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={4220--4227},
-  year={2021}
-}
-% top_4
-@inproceedings{nguyen2021contrastive,
-  title={Contrastive learning for natural language-based vehicle retrieval},
-  author={Nguyen, Tam Minh and Pham, Quang Huu and Doan, Linh Bao and Trinh, Hoang Viet and Nguyen, Viet-Anh and Phan, Viet-Hoang},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={4245--4252},
-  year={2021}
-}
-% top_5
-@inproceedings{sebastian2021tied,
-  title={TIED: A Cycle Consistent Encoder-Decoder Model for Text-to-Image Retrieval},
-  author={Sebastian, Clint and Imbriaco, Raffaele and Meletis, Panagiotis and Dubbelman, Gijs and Bondarev, Egor and others},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={4138--4146},
-  year={2021}
-}
-% top_6
-@inproceedings{nguyen2021traffic,
-  title={Traffic video event retrieval via text query using vehicle appearance and motion attributes},
-  author={Nguyen, Tien-Phat and Tran-Le, Ba-Thinh and Thai, Xuan-Dang and Nguyen, Tam V and Do, Minh N and Tran, Minh-Triet},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={4165--4172},
-  year={2021}
+@inproceedings{mendel2020semisupervised,
+  author    = {Robert Mendel and
+               Luis Antonio De Souza and
+               David Rauber and
+               Jo{\~{a}}o Paulo Papa and
+               Christoph Palm},
+  editor    = {Andrea Vedaldi and
+               Horst Bischof and
+               Thomas Brox and
+               Jan{-}Michael Frahm},
+  title     = {Semi-supervised Segmentation Based on Error-Correcting Supervision},
+  booktitle = {Computer Vision - {ECCV} 2020 - 16th European Conference, Glasgow,
+               UK, August 23-28, 2020, Proceedings, Part {XXIX}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {12374},
+  pages     = {141--157},
+  publisher = {Springer},
+  year      = {2020},
+  url       = {https://doi.org/10.1007/978-3-030-58526-6\_9},
+  doi       = {10.1007/978-3-030-58526-6\_9},
+  timestamp = {Thu, 14 Oct 2021 10:11:56 +0200},
+  biburl    = {https://dblp.org/rec/conf/eccv/MendelSRPP20.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
-% Tracking ------------------------------
-% Offline (batch based) tracking
-@inproceedings{rezatofighi2015joint,
-  title={Joint probabilistic data association revisited},
-  author={Rezatofighi, Seyed Hamid and Milan, Anton and Zhang, Zhen and Shi, Qinfeng and Dick, Anthony and Reid, Ian},
-  booktitle={Proceedings of the IEEE international conference on computer vision},
-  pages={3047--3055},
-  year={2015}
-}
-@inproceedings{kim2015multiple,
-  title={Multiple hypothesis tracking revisited},
-  author={Kim, Chanho and Li, Fuxin and Ciptadi, Arridhana and Rehg, James M},
-  booktitle={Proceedings of the IEEE international conference on computer vision},
-  pages={4696--4704},
-  year={2015}
+@inproceedings{souly2017semisupervised,
+  author    = {Nasim Souly and
+               Concetto Spampinato and
+               Mubarak Shah},
+  title     = {Semi Supervised Semantic Segmentation Using Generative Adversarial
+               Network},
+  booktitle = {{IEEE} International Conference on Computer Vision, {ICCV} 2017, Venice,
+               Italy, October 22-29, 2017},
+  pages     = {5689--5697},
+  publisher = {{IEEE} Computer Society},
+  year      = {2017},
+  url       = {https://doi.org/10.1109/ICCV.2017.606},
+  doi       = {10.1109/ICCV.2017.606},
+  timestamp = {Wed, 16 Oct 2019 14:14:51 +0200},
+  biburl    = {https://dblp.org/rec/conf/iccv/SoulySS17.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
-% Survey on DL in MOT
-@article{ciaparrone2020deep,
-  title={Deep learning in video multi-object tracking: A survey},
-  author={Ciaparrone, Gioele and S{\'a}nchez, Francisco Luque and Tabik, Siham and Troiano, Luigi and Tagliaferri, Roberto and Herrera, Francisco},
-  journal={Neurocomputing},
-  volume={381},
-  pages={61--88},
+@inproceedings{tarvainen2017meanteachers,
+  author    = {Antti Tarvainen and
+               Harri Valpola},
+  title     = {Mean teachers are better role models: Weight-averaged consistency
+               targets improve semi-supervised deep learning results},
+  booktitle = {5th International Conference on Learning Representations, {ICLR} 2017,
+               Toulon, France, April 24-26, 2017, Workshop Track Proceedings},
+  publisher = {OpenReview.net},
+  year      = {2017},
+  url       = {https://openreview.net/forum?id=ry8u21rtl},
+  timestamp = {Thu, 04 Apr 2019 13:20:08 +0200},
+  biburl    = {https://dblp.org/rec/conf/iclr/TarvainenV17.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{cui2019semisupervised,
+  author    = {Wenhui Cui and
+               Yanlin Liu and
+               Yuxing Li and
+               Menghao Guo and
+               Yiming Li and
+               Xiuli Li and
+               Tianle Wang and
+               Xiangzhu Zeng and
+               Chuyang Ye},
+  editor    = {Albert C. S. Chung and
+               James C. Gee and
+               Paul A. Yushkevich and
+               Siqi Bao},
+  title     = {Semi-supervised Brain Lesion Segmentation with an Adapted Mean Teacher
+               Model},
+  booktitle = {Information Processing in Medical Imaging - 26th International Conference,
+               {IPMI} 2019, Hong Kong, China, June 2-7, 2019, Proceedings},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {11492},
+  pages     = {554--565},
+  publisher = {Springer},
+  year      = {2019},
+  url       = {https://doi.org/10.1007/978-3-030-20351-1\_43},
+  doi       = {10.1007/978-3-030-20351-1\_43},
+  timestamp = {Wed, 22 May 2019 11:32:48 +0200},
+  biburl    = {https://dblp.org/rec/conf/ipmi/CuiLLGLLWZY19.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{hang2020localnglobal,
+  author    = {Wenlong Hang and
+               Wei Feng and
+               Shuang Liang and
+               Lequan Yu and
+               Qiong Wang and
+               Kup{-}Sze Choi and
+               Jing Qin},
+  editor    = {Anne L. Martel and
+               Purang Abolmaesumi and
+               Danail Stoyanov and
+               Diana Mateus and
+               Maria A. Zuluaga and
+               S. Kevin Zhou and
+               Daniel Racoceanu and
+               Leo Joskowicz},
+  title     = {Local and Global Structure-Aware Entropy Regularized Mean Teacher
+               Model for 3D Left Atrium Segmentation},
+  booktitle = {Medical Image Computing and Computer Assisted Intervention - {MICCAI}
+               2020 - 23rd International Conference, Lima, Peru, October 4-8, 2020,
+               Proceedings, Part {I}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {12261},
+  pages     = {562--571},
+  publisher = {Springer},
+  year      = {2020},
+  url       = {https://doi.org/10.1007/978-3-030-59710-8\_55},
+  doi       = {10.1007/978-3-030-59710-8\_55},
+  timestamp = {Sat, 09 Apr 2022 12:46:26 +0200},
+  biburl    = {https://dblp.org/rec/conf/miccai/HangFLYWCQ20.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{wang2020double,
+  author    = {Yixin Wang and
+               Yao Zhang and
+               Jiang Tian and
+               Cheng Zhong and
+               Zhongchao Shi and
+               Yang Zhang and
+               Zhiqiang He},
+  editor    = {Anne L. Martel and
+               Purang Abolmaesumi and
+               Danail Stoyanov and
+               Diana Mateus and
+               Maria A. Zuluaga and
+               S. Kevin Zhou and
+               Daniel Racoceanu and
+               Leo Joskowicz},
+  title     = {Double-Uncertainty Weighted Method for Semi-supervised Learning},
+  booktitle = {Medical Image Computing and Computer Assisted Intervention - {MICCAI}
+               2020 - 23rd International Conference, Lima, Peru, October 4-8, 2020,
+               Proceedings, Part {I}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {12261},
+  pages     = {542--551},
+  publisher = {Springer},
+  year      = {2020},
+  url       = {https://doi.org/10.1007/978-3-030-59710-8\_53},
+  doi       = {10.1007/978-3-030-59710-8\_53},
+  timestamp = {Tue, 01 Jun 2021 15:22:56 +0200},
+  biburl    = {https://dblp.org/rec/conf/miccai/WangZTZSZH20.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{yu2019uncertainty,
+  author    = {Lequan Yu and
+               Shujun Wang and
+               Xiaomeng Li and
+               Chi{-}Wing Fu and
+               Pheng{-}Ann Heng},
+  editor    = {Dinggang Shen and
+               Tianming Liu and
+               Terry M. Peters and
+               Lawrence H. Staib and
+               Caroline Essert and
+               Sean Zhou and
+               Pew{-}Thian Yap and
+               Ali R. Khan},
+  title     = {Uncertainty-Aware Self-ensembling Model for Semi-supervised 3D Left
+               Atrium Segmentation},
+  booktitle = {Medical Image Computing and Computer Assisted Intervention - {MICCAI}
+               2019 - 22nd International Conference, Shenzhen, China, October 13-17,
+               2019, Proceedings, Part {II}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {11765},
+  pages     = {605--613},
+  publisher = {Springer},
+  year      = {2019},
+  url       = {https://doi.org/10.1007/978-3-030-32245-8\_67},
+  doi       = {10.1007/978-3-030-32245-8\_67},
+  timestamp = {Fri, 25 Mar 2022 09:53:59 +0100},
+  biburl    = {https://dblp.org/rec/conf/miccai/YuWLFH19.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{ke2020guided,
+  author    = {Zhanghan Ke and
+               Di Qiu and
+               Kaican Li and
+               Qiong Yan and
+               Rynson W. H. Lau},
+  editor    = {Andrea Vedaldi and
+               Horst Bischof and
+               Thomas Brox and
+               Jan{-}Michael Frahm},
+  title     = {Guided Collaborative Training for Pixel-Wise Semi-Supervised Learning},
+  booktitle = {Computer Vision - {ECCV} 2020 - 16th European Conference, Glasgow,
+               UK, August 23-28, 2020, Proceedings, Part {XIII}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {12358},
+  pages     = {429--445},
+  publisher = {Springer},
+  year      = {2020},
+  url       = {https://doi.org/10.1007/978-3-030-58601-0\_26},
+  doi       = {10.1007/978-3-030-58601-0\_26},
+  timestamp = {Mon, 30 Nov 2020 17:54:10 +0100},
+  biburl    = {https://dblp.org/rec/conf/eccv/KeQLYL20.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{cao2022adversarial,
+  author    = {Cong Cao and
+               Tianwei Lin and
+               Dongliang He and
+               Fu Li and
+               Huanjing Yue and
+               Jingyu Yang and
+               Errui Ding},
+  title     = {Adversarial Dual-Student with Differentiable Spatial Warping for Semi-Supervised
+               Semantic Segmentation},
+  journal   = {CoRR},
+  volume    = {abs/2203.02792},
+  year      = {2022},
+  url       = {https://doi.org/10.48550/arXiv.2203.02792},
+  doi       = {10.48550/arXiv.2203.02792},
+  eprinttype = {arXiv},
+  eprint    = {2203.02792},
+  timestamp = {Tue, 05 Apr 2022 17:30:01 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2203-02792.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{ke2019dualstudent,
+  author    = {Zhanghan Ke and
+               Daoye Wang and
+               Qiong Yan and
+               Jimmy S. J. Ren and
+               Rynson W. H. Lau},
+  title     = {Dual Student: Breaking the Limits of the Teacher in Semi-Supervised
+               Learning},
+  booktitle = {2019 {IEEE/CVF} International Conference on Computer Vision, {ICCV}
+               2019, Seoul, Korea (South), October 27 - November 2, 2019},
+  pages     = {6727--6735},
+  publisher = {{IEEE}},
+  year      = {2019},
+  url       = {https://doi.org/10.1109/ICCV.2019.00683},
+  doi       = {10.1109/ICCV.2019.00683},
+  timestamp = {Thu, 16 Apr 2020 12:01:33 +0200},
+  biburl    = {https://dblp.org/rec/conf/iccv/KeWYRL19.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{chen2021semisupervised,
+  author    = {Xiaokang Chen and
+               Yuhui Yuan and
+               Gang Zeng and
+               Jingdong Wang},
+  title     = {Semi-Supervised Semantic Segmentation With Cross Pseudo Supervision},
+  booktitle = {{IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR}
+               2021, virtual, June 19-25, 2021},
+  pages     = {2613--2622},
+  publisher = {Computer Vision Foundation / {IEEE}},
+  year      = {2021},
+  url       = {https://openaccess.thecvf.com/content/CVPR2021/html/Chen\_Semi-Supervised\_Semantic\_Segmentation\_With\_Cross\_Pseudo\_Supervision\_CVPR\_2021\_paper.html},
+  doi       = {10.1109/CVPR46437.2021.00264},
+  timestamp = {Mon, 18 Jul 2022 16:47:40 +0200},
+  biburl    = {https://dblp.org/rec/conf/cvpr/ChenYZ021.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{luo2021semisupervised,
+  author    = {Xiangde Luo and
+               Minhao Hu and
+               Tao Song and
+               Guotai Wang and
+               Shaoting Zhang},
+  title     = {Semi-Supervised Medical Image Segmentation via Cross Teaching between
+               {CNN} and Transformer},
+  journal   = {CoRR},
+  volume    = {abs/2112.04894},
+  year      = {2021},
+  url       = {https://arxiv.org/abs/2112.04894},
+  eprinttype = {arXiv},
+  eprint    = {2112.04894},
+  timestamp = {Tue, 14 Dec 2021 14:21:31 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2112-04894.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+@article{ma2020active,
+  title={Active contour regularized semi-supervised learning for COVID-19 CT infection segmentation with limited annotations},
+  author={Ma, Jun and Nie, Ziwei and Wang, Congcong and Dong, Guoqiang and Zhu, Qiongjie and He, Jian and Gui, Luying and Yang, Xiaoping},
+  journal={Physics in Medicine \& Biology},
+  volume={65},
+  number={22},
+  pages={225034},
   year={2020},
-  publisher={Elsevier}
+  publisher={IOP Publishing}
 }
 
-% Online tracking
-@inproceedings{pang2021quasi,
-  title={Quasi-dense similarity learning for multiple object tracking},
-  author={Pang, Jiangmiao and Qiu, Linlu and Li, Xia and Chen, Haofeng and Li, Qi and Darrell, Trevor and Yu, Fisher},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={164--173},
-  year={2021}
-}
-
-@inproceedings{zhou2020tracking,
-  title={Tracking objects as points},
-  author={Zhou, Xingyi and Koltun, Vladlen and Kr{\"a}henb{\"u}hl, Philipp},
-  booktitle={European Conference on Computer Vision},
-  pages={474--490},
+@inproceedings{peng2020mutual,
+  title={Mutual information deep regularization for semi-supervised segmentation},
+  author={Peng, Jizong and Pedersoli, Marco and Desrosiers, Christian},
+  booktitle={Medical Imaging with Deep Learning},
+  pages={601--613},
   year={2020},
+  organization={PMLR}
+}
+
+@article{li2020transformation,
+  title={Transformation-consistent self-ensembling model for semisupervised medical image segmentation},
+  author={Li, Xiaomeng and Yu, Lequan and Chen, Hao and Fu, Chi-Wing and Xing, Lei and Heng, Pheng-Ann},
+  journal={IEEE Transactions on Neural Networks and Learning Systems},
+  volume={32},
+  number={2},
+  pages={523--534},
+  year={2020},
+  publisher={IEEE}
+}
+
+@inproceedings{bai2017semisupervised,
+  author    = {Wenjia Bai and
+               Ozan Oktay and
+               Matthew Sinclair and
+               Hideaki Suzuki and
+               Martin Rajchl and
+               Giacomo Tarroni and
+               Ben Glocker and
+               Andrew P. King and
+               Paul M. Matthews and
+               Daniel Rueckert},
+  editor    = {Maxime Descoteaux and
+               Lena Maier{-}Hein and
+               Alfred M. Franz and
+               Pierre Jannin and
+               D. Louis Collins and
+               Simon Duchesne},
+  title     = {Semi-supervised Learning for Network-Based Cardiac {MR} Image Segmentation},
+  booktitle = {Medical Image Computing and Computer Assisted Intervention - {MICCAI}
+               2017 - 20th International Conference, Quebec City, QC, Canada, September
+               11-13, 2017, Proceedings, Part {II}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {10434},
+  pages     = {253--260},
+  publisher = {Springer},
+  year      = {2017},
+  url       = {https://doi.org/10.1007/978-3-319-66185-8\_29},
+  doi       = {10.1007/978-3-319-66185-8\_29},
+  timestamp = {Wed, 25 Sep 2019 18:20:33 +0200},
+  biburl    = {https://dblp.org/rec/conf/miccai/BaiOSSRTGKMR17.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+% ACTIVE LEARNING
+
+@inproceedings{mahajan2018exploring
+  author    = {Dhruv Mahajan and
+               Ross B. Girshick and
+               Vignesh Ramanathan and
+               Kaiming He and
+               Manohar Paluri and
+               Yixuan Li and
+               Ashwin Bharambe and
+               Laurens van der Maaten},
+  editor    = {Vittorio Ferrari and
+               Martial Hebert and
+               Cristian Sminchisescu and
+               Yair Weiss},
+  title     = {Exploring the Limits of Weakly Supervised Pretraining},
+  booktitle = {Computer Vision - {ECCV} 2018 - 15th European Conference, Munich,
+               Germany, September 8-14, 2018, Proceedings, Part {II}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {11206},
+  pages     = {185--201},
+  publisher = {Springer},
+  year      = {2018},
+  url       = {https://doi.org/10.1007/978-3-030-01216-8\_12},
+  doi       = {10.1007/978-3-030-01216-8\_12},
+  timestamp = {Mon, 28 Sep 2020 08:19:37 +0200},
+  biburl    = {https://dblp.org/rec/conf/eccv/MahajanGRHPLBM18.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{joulin2016learningvisual,
+  author    = {Armand Joulin and
+               Laurens van der Maaten and
+               Allan Jabri and
+               Nicolas Vasilache},
+  editor    = {Bastian Leibe and
+               Jiri Matas and
+               Nicu Sebe and
+               Max Welling},
+  title     = {Learning Visual Features from Large Weakly Supervised Data},
+  booktitle = {Computer Vision - {ECCV} 2016 - 14th European Conference, Amsterdam,
+               The Netherlands, October 11-14, 2016, Proceedings, Part {VII}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {9911},
+  pages     = {67--84},
+  publisher = {Springer},
+  year      = {2016},
+  url       = {https://doi.org/10.1007/978-3-319-46478-7\_5},
+  doi       = {10.1007/978-3-319-46478-7\_5},
+  timestamp = {Tue, 14 May 2019 10:00:45 +0200},
+  biburl    = {https://dblp.org/rec/conf/eccv/JoulinMJV16.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{atlas1989trainingconnectionist
+  author    = {Les E. Atlas and
+               David A. Cohn and
+               Richard E. Ladner},
+  editor    = {David S. Touretzky},
+  title     = {Training Connectionist Networks with Queries and Selective Sampling},
+  booktitle = {Advances in Neural Information Processing Systems 2, {[NIPS} Conference,
+               Denver, Colorado, USA, November 27-30, 1989]},
+  pages     = {566--573},
+  publisher = {Morgan Kaufmann},
+  year      = {1989},
+  url       = {http://papers.nips.cc/paper/261-training-connectionist-networks-with-queries-and-selective-sampling},
+  timestamp = {Mon, 16 May 2022 15:41:51 +0200},
+  biburl    = {https://dblp.org/rec/conf/nips/AtlasCL89.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{joshi2009multi,
+  title={Multi-class active learning for image classification},
+  author={Joshi, Ajay J and Porikli, Fatih and Papanikolopoulos, Nikolaos},
+  booktitle={2009 ieee conference on computer vision and pattern recognition},
+  pages={2372--2379},
+  year={2009},
+  organization={IEEE}
+}
+
+@article{wang2016cost,
+  title={Cost-effective active learning for deep image classification},
+  author={Wang, Keze and Zhang, Dongyu and Li, Ya and Zhang, Ruimao and Lin, Liang},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  volume={27},
+  number={12},
+  pages={2591--2600},
+  year={2016},
+  publisher={IEEE}
+}
+
+@article{tong2001svmactive,
+  author    = {Simon Tong and
+               Daphne Koller},
+  title     = {Support Vector Machine Active Learning with Applications to Text Classification},
+  journal   = {J. Mach. Learn. Res.},
+  volume    = {2},
+  pages     = {45--66},
+  year      = {2001},
+  url       = {http://jmlr.org/papers/v2/tong01a.html},
+  timestamp = {Wed, 10 Jul 2019 15:28:23 +0200},
+  biburl    = {https://dblp.org/rec/journals/jmlr/TongK01.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{seung1992query,
+  title={Query by committee},
+  author={Seung, H Sebastian and Opper, Manfred and Sompolinsky, Haim},
+  booktitle={Proceedings of the fifth annual workshop on Computational learning theory},
+  pages={287--294},
+  year={1992}
+}
+
+@inproceedings{beluch2018power,
+  author    = {William H. Beluch and
+               Tim Genewein and
+               Andreas N{\"{u}}rnberger and
+               Jan M. K{\"{o}}hler},
+  title     = {The Power of Ensembles for Active Learning in Image Classification},
+  booktitle = {2018 {IEEE} Conference on Computer Vision and Pattern Recognition,
+               {CVPR} 2018, Salt Lake City, UT, USA, June 18-22, 2018},
+  pages     = {9368--9377},
+  publisher = {Computer Vision Foundation / {IEEE} Computer Society},
+  year      = {2018},
+  url       = {http://openaccess.thecvf.com/content\_cvpr\_2018/html/Beluch\_The\_Power\_of\_CVPR\_2018\_paper.html},
+  doi       = {10.1109/CVPR.2018.00976},
+  timestamp = {Mon, 03 Jan 2022 22:30:52 +0100},
+  biburl    = {https://dblp.org/rec/conf/cvpr/BeluchGNK18.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{sener2018activelearningforcnn,
+  author    = {Ozan Sener and
+               Silvio Savarese},
+  title     = {Active Learning for Convolutional Neural Networks: {A} Core-Set Approach},
+  booktitle = {6th International Conference on Learning Representations, {ICLR} 2018,
+               Vancouver, BC, Canada, April 30 - May 3, 2018, Conference Track Proceedings},
+  publisher = {OpenReview.net},
+  year      = {2018},
+  url       = {https://openreview.net/forum?id=H1aIuk-RW},
+  timestamp = {Thu, 25 Jul 2019 14:25:55 +0200},
+  biburl    = {https://dblp.org/rec/conf/iclr/SenerS18.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{nguyen2004activepreclustering,
+  title={Active learning using pre-clustering},
+  author={Nguyen, Hieu T and Smeulders, Arnold},
+  booktitle={Proceedings of the twenty-first international conference on Machine learning},
+  pages={79},
+  year={2004}
+}
+
+@article{guo2010activeinstance,
+  title={Active instance sampling via matrix partition},
+  author={Guo, Yuhong},
+  journal={Advances in Neural Information Processing Systems},
+  volume={23},
+  year={2010}
+}
+
+@inproceedings{bilgic2009link,
+  title={Link-based active learning},
+  author={Bilgic, Mustafa and Getoor, Lise},
+  booktitle={NIPS Workshop on Analyzing Networks and Learning with Graphs},
+  volume={4},
+  year={2009}
+}
+
+@article{roy2001toward,
+  title={Toward optimal active learning through monte carlo estimation of error reduction},
+  author={Roy, Nicholas and McCallum, Andrew},
+  journal={ICML, Williamstown},
+  volume={2},
+  pages={441--448},
+  year={2001}
+}
+
+@article{settles2007multiple,
+  title={Multiple-instance active learning},
+  author={Settles, Burr and Craven, Mark and Ray, Soumya},
+  journal={Advances in neural information processing systems},
+  volume={20},
+  year={2007}
+}
+
+@inproceedings{freytag2014selecting,
+  title={Selecting influential examples: Active learning with expected model output changes},
+  author={Freytag, Alexander and Rodner, Erik and Denzler, Joachim},
+  booktitle={European conference on computer vision},
+  pages={562--577},
+  year={2014},
   organization={Springer}
 }
 
-@inproceedings{bergmann2019tracking,
-  title={Tracking without bells and whistles},
-  author={Bergmann, Philipp and Meinhardt, Tim and Leal-Taixe, Laura},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  pages={941--951},
-  year={2019}
+@inproceedings{wang2018towardshuman,
+  author    = {Keze Wang and
+               Xiaopeng Yan and
+               Dongyu Zhang and
+               Lei Zhang and
+               Liang Lin},
+  title     = {Towards Human-Machine Cooperation: Self-Supervised Sample Mining for
+               Object Detection},
+  booktitle = {2018 {IEEE} Conference on Computer Vision and Pattern Recognition,
+               {CVPR} 2018, Salt Lake City, UT, USA, June 18-22, 2018},
+  pages     = {1605--1613},
+  publisher = {Computer Vision Foundation / {IEEE} Computer Society},
+  year      = {2018},
+  url       = {http://openaccess.thecvf.com/content\_cvpr\_2018/html/Wang\_Towards\_Human-Machine\_Cooperation\_CVPR\_2018\_paper.html},
+  doi       = {10.1109/CVPR.2018.00173},
+  timestamp = {Tue, 31 Aug 2021 14:00:32 +0200},
+  biburl    = {https://dblp.org/rec/conf/cvpr/WangYZ0L18.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
-@inproceedings{bochinski2017high,
-  title={High-speed tracking-by-detection without using image information},
-  author={Bochinski, Erik and Eiselein, Volker and Sikora, Thomas},
-  booktitle={2017 14th IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS)},
-  pages={1--6},
-  year={2017},
-  organization={IEEE}
-}
-
-
-% DeepSORT
-@inproceedings{wojke2017simple,
-  title={Simple online and realtime tracking with a deep association metric},
-  author={Wojke, Nicolai and Bewley, Alex and Paulus, Dietrich},
-  booktitle={2017 IEEE international conference on image processing (ICIP)},
-  pages={3645--3649},
-  year={2017},
-  organization={IEEE}
-}
-
-
-% SORT
-@inproceedings{bewley2016simple,
-  title={Simple online and realtime tracking},
-  author={Bewley, Alex and Ge, Zongyuan and Ott, Lionel and Ramos, Fabio and Upcroft, Ben},
-  booktitle={2016 IEEE international conference on image processing (ICIP)},
-  pages={3464--3468},
-  year={2016},
-  organization={IEEE}
-}
-%% Kalman Filter
-@article{kalman1960new,
-  title={A new approach to linear filtering and prediction problems},
-  author={Kalman, Rudolph Emil},
-  year={1960}
-}
-%% Hungarian algorithm
-@article{kuhn1955hungarian,
-  title={The Hungarian method for the assignment problem},
-  author={Kuhn, Harold W},
-  journal={Naval research logistics quarterly},
-  volume={2},
-  number={1-2},
-  pages={83--97},
-  year={1955},
-  publisher={Wiley Online Library}
-}
-
-% ------------------------------------------
-% SRL
-@article{shi2019simple,
-  title={Simple bert models for relation extraction and semantic role labeling},
-  author={Shi, Peng and Lin, Jimmy},
-  journal={arXiv preprint arXiv:1904.05255},
-  year={2019}
-}
-
-% SRL ------------------------------
-% Visual semantic role labeling
-@article{gupta2015visual,
-  title={Visual semantic role labeling},
-  author={Gupta, Saurabh and Malik, Jitendra},
-  journal={arXiv preprint arXiv:1505.04474},
-  year={2015}
-}
-% Visual question answering
-@article{sadhu2021video,
-  title={Video Question Answering with Phrases via Semantic Roles},
-  author={Sadhu, Arka and Chen, Kan and Nevatia, Ram},
-  journal={arXiv preprint arXiv:2104.03762},
-  year={2021}
-}
-% VOG
-@inproceedings{sadhu2020video,
-  title={Video object grounding using semantic roles in language description},
-  author={Sadhu, Arka and Chen, Kan and Nevatia, Ram},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={10417--10427},
-  year={2020}
-}
-
-%HGR
-@inproceedings{chen2020fine,
-  title={Fine-grained video-text retrieval with hierarchical graph reasoning},
-  author={Chen, Shizhe and Zhao, Yida and Jin, Qin and Wu, Qi},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={10638--10647},
-  year={2020}
-}
-
-% SRL solutions
-@inproceedings{zhou2015end,
-  title={End-to-end learning of semantic role labeling using recurrent neural networks},
-  author={Zhou, Jie and Xu, Wei},
-  booktitle={Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
-  pages={1127--1137},
-  year={2015}
-}
-@article{marcheggiani2017simple,
-  title={A simple and accurate syntax-agnostic neural model for dependency-based semantic role labeling},
-  author={Marcheggiani, Diego and Frolov, Anton and Titov, Ivan},
-  journal={arXiv preprint arXiv:1701.02593},
+@inproceedings{liu2017activehumanpose,
+  title={Active learning for human pose estimation},
+  author={Liu, Buyu and Ferrari, Vittorio},
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision},
+  pages={4363--4372},
   year={2017}
 }
-@inproceedings{he2017deep,
-  title={Deep semantic role labeling: What works and what’s next},
-  author={He, Luheng and Lee, Kenton and Lewis, Mike and Zettlemoyer, Luke},
-  booktitle={Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
-  pages={473--483},
-  year={2017}
-}
-@inproceedings{tan2018deep,
-  title={Deep semantic role labeling with self-attention},
-  author={Tan, Zhixing and Wang, Mingxuan and Xie, Jun and Chen, Yidong and Shi, Xiaodong},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  volume={32},
-  number={1},
-  year={2018}
-}
-@article{strubell2018linguistically,
-  title={Linguistically-informed self-attention for semantic role labeling},
-  author={Strubell, Emma and Verga, Patrick and Andor, Daniel and Weiss, David and McCallum, Andrew},
-  journal={arXiv preprint arXiv:1804.08199},
-  year={2018}
-}
 
-% ----------------------------------------------------------------------
-% Method
-% Efficient Net
-@inproceedings{tan2019efficientnet,
-  title={Efficientnet: Rethinking model scaling for convolutional neural networks},
-  author={Tan, Mingxing and Le, Quoc},
-  booktitle={International Conference on Machine Learning},
-  pages={6105--6114},
-  year={2019},
-  organization={PMLR}
-}
-% ResNet
-@inproceedings{he2016deep,
-  title={Deep residual learning for image recognition},
-  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+@inproceedings{jain2016activesegmentationprop,
+  title={Active image segmentation propagation},
+  author={Jain, Suyog Dutt and Grauman, Kristen},
   booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
-  pages={770--778},
+  pages={2864--2873},
   year={2016}
 }
-% ImageNet
-@article{russakovsky2015imagenet,
-  title={Imagenet large scale visual recognition challenge},
-  author={Russakovsky, Olga and Deng, Jia and Su, Hao and Krause, Jonathan and Satheesh, Sanjeev and Ma, Sean and Huang, Zhiheng and Karpathy, Andrej and Khosla, Aditya and Bernstein, Michael and others},
-  journal={International journal of computer vision},
-  volume={115},
-  number={3},
-  pages={211--252},
-  year={2015},
-  publisher={Springer}
+
+@inproceedings{gal2017deep,
+  title={Deep bayesian active learning with image data},
+  author={Gal, Yarin and Islam, Riashat and Ghahramani, Zoubin},
+  booktitle={International Conference on Machine Learning},
+  pages={1183--1192},
+  year={2017},
+  organization={PMLR}
 }
 
-% ----------------------------------------
-% Experiment
-% MRR 
-@inproceedings{voorhees1999trec,
-  title={The TREC-8 question answering track report},
-  author={Voorhees, Ellen M and others},
-  booktitle={Trec},
-  volume={99},
-  pages={77--82},
-  year={1999},
-  organization={Citeseer}
+@inproceedings{gal2016dropout,
+  title={Dropout as a bayesian approximation: Representing model uncertainty in deep learning},
+  author={Gal, Yarin and Ghahramani, Zoubin},
+  booktitle={international conference on machine learning},
+  pages={1050--1059},
+  year={2016},
+  organization={PMLR}
 }
+
+@inproceedings{yoo2019learningloss,
+  title={Learning loss for active learning},
+  author={Yoo, Donggeun and Kweon, In So},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={93--102},
+  year={2019}
+}
+
+% SECTION RELATED WORKS
+% SUBSECTION SEGMENTATION
+
+@article{FCN,
+  author    = {Jonathan Long and
+               Evan Shelhamer and
+               Trevor Darrell},
+  title     = {Fully Convolutional Networks for Semantic Segmentation},
+  journal   = {CoRR},
+  volume    = {abs/1411.4038},
+  year      = {2014},
+  url       = {http://arxiv.org/abs/1411.4038},
+  eprinttype = {arXiv},
+  eprint    = {1411.4038},
+  timestamp = {Mon, 13 Aug 2018 16:48:17 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/LongSD14.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{segnet,
+  author    = {Vijay Badrinarayanan and
+               Alex Kendall and
+               Roberto Cipolla},
+  title     = {SegNet: {A} Deep Convolutional Encoder-Decoder Architecture for Image
+               Segmentation},
+  journal   = {CoRR},
+  volume    = {abs/1511.00561},
+  year      = {2015},
+  url       = {http://arxiv.org/abs/1511.00561},
+  eprinttype = {arXiv},
+  eprint    = {1511.00561},
+  timestamp = {Mon, 13 Aug 2018 16:46:06 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/BadrinarayananK15.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{Unet,
+  author    = {Olaf Ronneberger and
+               Philipp Fischer and
+               Thomas Brox},
+  title     = {U-Net: Convolutional Networks for Biomedical Image Segmentation},
+  journal   = {CoRR},
+  volume    = {abs/1505.04597},
+  year      = {2015},
+  url       = {http://arxiv.org/abs/1505.04597},
+  eprinttype = {arXiv},
+  eprint    = {1505.04597},
+  timestamp = {Mon, 13 Aug 2018 16:46:52 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/RonnebergerFB15.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{UnetPP,
+  author    = {Zongwei Zhou and
+               Md Mahfuzur Rahman Siddiquee and
+               Nima Tajbakhsh and
+               Jianming Liang},
+  title     = {UNet++: {A} Nested U-Net Architecture for Medical Image Segmentation},
+  journal   = {CoRR},
+  volume    = {abs/1807.10165},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1807.10165},
+  eprinttype = {arXiv},
+  eprint    = {1807.10165},
+  timestamp = {Mon, 13 Aug 2018 16:46:03 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1807-10165.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{AttUnet,
+  author    = {Ozan Oktay and
+               Jo Schlemper and
+               Lo{\"{\i}}c Le Folgoc and
+               Matthew C. H. Lee and
+               Mattias P. Heinrich and
+               Kazunari Misawa and
+               Kensaku Mori and
+               Steven G. McDonagh and
+               Nils Y. Hammerla and
+               Bernhard Kainz and
+               Ben Glocker and
+               Daniel Rueckert},
+  title     = {Attention U-Net: Learning Where to Look for the Pancreas},
+  journal   = {CoRR},
+  volume    = {abs/1804.03999},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1804.03999},
+  eprinttype = {arXiv},
+  eprint    = {1804.03999},
+  timestamp = {Tue, 17 Sep 2019 14:15:15 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1804-03999.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{Deeplab,
+  added-at = {2020-06-09T00:59:44.000+0200},
+  author = {Chen, Liang-Chieh and Papandreou, George and Kokkinos, Iasonas and Murphy, Kevin and Yuille, Alan L.},
+  biburl = {https://www.bibsonomy.org/bibtex/27375614fcde32d25fd30f2a3d3ee03f0/jan.hofmann1},
+  ee = {http://arxiv.org/abs/1606.00915},
+  interhash = {5be0e8f622957ce8ca135d93846b0392},
+  intrahash = {7375614fcde32d25fd30f2a3d3ee03f0},
+  journal = {CoRR},
+  keywords = {thema:pyramid_scene_parsing},
+  timestamp = {2020-06-09T00:59:44.000+0200},
+  title = {DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs.},
+  url = {http://dblp.uni-trier.de/db/journals/corr/corr1606.html#ChenPK0Y16},
+  volume = {abs/1606.00915},
+  year = 2016
+}
+
+@article{TransUnet,
+  author    = {Jieneng Chen and
+               Yongyi Lu and
+               Qihang Yu and
+               Xiangde Luo and
+               Ehsan Adeli and
+               Yan Wang and
+               Le Lu and
+               Alan L. Yuille and
+               Yuyin Zhou},
+  title     = {TransUNet: Transformers Make Strong Encoders for Medical Image Segmentation},
+  journal   = {CoRR},
+  volume    = {abs/2102.04306},
+  year      = {2021},
+  url       = {https://arxiv.org/abs/2102.04306},
+  eprinttype = {arXiv},
+  eprint    = {2102.04306},
+  timestamp = {Mon, 12 Apr 2021 14:40:33 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2102-04306.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+

@@ -1,0 +1,27 @@
+\section{Semi-supervised learning}
+\label{sec:semisup}
+
+With the constantly increasing volume of non-annotated raw data in practice, semi-supervised learning approaches have been gaining popularity in the area of deep learning recently to effectively utilize this source of data.  
+Recent works focus on two of the most common semi-supervised methods, which are consistency regularization and pseudo-labeling.
+
+Consistency regularization aims at enforcing the consistency between the predictions (or intermediate features) of two different views of an unlabeled input sample. 
+Some prior works \cite{kim2020structuredloss}, \cite{french2019semi} add perturbation to the input sample, then forward both the original and perturbed one through the same network to generate two augmented outputs. These two outputs are forced to be similar by the regularization function. This approach can be seen as attaching an unsupervised branch to the supervised learning paradigm.
+
+On the other hand, pseudo-labeling, a.k.a., self-learning, self-labeling, or decision-directed learning, is initially developed for using unlabeled data in classification. Recently, it is applied for semi-supervised segmentation \[\cite{zheng2021rectifying}, \cite{chen2020naivestudent}, \cite{zhu2020improving}, \cite{zoph2020rethinking} \], . Frequently, it involves more than one model to produce pseudo-labels by converting model predictions on unlabeled samples into soft or hard labels as optimization targets for retraining. The process can be iterated several times. Various schemes are introduced on how to decide the pseudo segmentation maps. For example, the GAN-based methods [\cite{hung2018adversarial}, \cite{mittal2019semi}, \cite{souly2017semisupervised}], use the discriminator learned for distinguishing the predictions and the ground-truth segmentation to select high-confident segmentation predictions on unlabeled images as pseudo segmentation.
+
+One common type of approach is teacher-student settings. The teacher, which usually is the larger network, is fully-supervisedly trained on the labeled data while generating pseudo-labels on unlabeled data to guide the student model to learn more stably \[\cite{tarvainen2017meanteachers}, \cite{cui2019semisupervised}, \cite{hang2020localnglobal}, \cite{wang2020double}, \cite{yu2019uncertainty}\]. Often, The teacher's parameters are updated using an exponential moving average from the student's parameters \cite{cui2019semisupervised}. 
+
+Apart from the teacher-student paradigm, many proposals are the variance of it. As discussed in \cite{ke2019dualstudent}, because of exponential moving average, teacher network in mean-teacher tends to be very close to the student when the training process converges.
+
+Dual-student [\cite{hang2020localnglobal}, \cite{ke2020guided}, \cite{cao2022adversarial}], for instance, is proposed to use two independently initialized student network without teacher and has been achieving great performance as well. One examplar is \cite{chen2021semisupervised}, which has been adopted in our work, trains 2 segmentation models simultaneously on both labeled and unlabeled data. Basically, with two source images as input, they generate a cutmix version by combining them as one image and mixing the two pseudo segmentation maps obtained from the models. Afterward, the mixed pair of image and mask is used as supervision of the two segmentation networks. 
+Developed from that, \cite{luo2021semisupervised} incorporates the idea that those two models should have different architectures to boost the performance by far, one of them should be conventional CNNs while the other has a transformers-based structure. 
+
+Recently, SSL has been widely used for medical image computing to reduce the
+annotation efforts [\cite{hang2020localnglobal}, \cite{li2020transformation}, \cite{ma2020active}, \cite{peng2020mutual}]. Bai et al \cite{bai2017semisupervised} developed an iterative framework where in each iteration, pseudo labels for unannotated images are predicted by the network
+and refined by a Conditional Random Field (CRF) then the new pseudo labels are used
+to update the network. 
+
+We desire to build the same framework as \cite{bai2017semisupervised} in which multiple models, in which choosen architectures are inspired from \cite{luo2021semisupervised}, are used to refine the pseudo labels. 
+
+However, one inherent weakness of the pseudo label learning is that the pseudo label usually contains noisy predictions. Despite the fact that most pseudo labels are correct, wrong labels also exist, which could compromise the subsequent training. If the model is fine-tuned on the noisy label, the error would also be transferred to the
+adapted model. Therefore, we also integrate active learning to decide which pseudo labels are suitable for retraining the	 model.
