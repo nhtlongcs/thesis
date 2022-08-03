@@ -1,13 +1,24 @@
 \section{Objectives}
 \label{sec:objectives}
 
-The proposed method for interactive ct volume segmentation is satisfying all designed goals, including fast, limited propagated times to satisfy results, the results are always exactly comparable to the annotator level. Besides, we do experiment a annotation tool with the proposed algorithm. The annotation tool can be used to provide an intuitive interface for users to interactively mark regions of interest on a 3D image and has been found effective in our study.
+% The proposed method for interactive ct volume segmentation is to satisfy all designed goals, including fast, limited propagated times to satisfying results, the results are always exactly comparable to the annotator level. Besides, we do experiment a annotation tool with the proposed algorithm. The annotation tool can be used to provide an intuitive interface for users to interactively mark regions of interest on a 3D image and has been found effective in our study.
 
-The main contribution of this thesis includes
+The main objective of this thesis is to pioneer the application of the recent state-of-the-art method of semi-supervised video object segmentation into the problem of CT volume segmentation, with the hope of improving effectiveness, efficiency and pragmatism. On top of that, we are ambitious to build an interactive annotation tool integrated with the algorithm that can assist even novice users in precisely marking regions of interest on a 3D CT volume. Overall, the main contribution of this thesis includes:
+
 \begin{itemize}
-    \item 
+    \item Propose an automatic pipeline to segment human organ parts from CT volumes while utilizing an extensive amount of unlabeled data
+    
+    \item Propose a method that combines pseudo-labeling with active learning to plausibly generate usable data for retraining and improving the networks
+    
+    \item Develop an annotation tool with an interactive and user-friendly GUI that adopts our adjusted propagation method, which can reduce human effort and expert-level knowledge requirement
+    
+    \item Propose a way to fuse the 3-dimensional information into 2D architectures, by using a positional encoder
+    
 \end{itemize}
-The detailed work that we have done in this thesis includes
+The detailed work that we have done in this thesis includes:
 \begin{itemize}
-    \item 
+    \item Conduct various research about topics of Deep learning in the medical area, especially 3D image segmentation and also works related to Semi-supervised learning and Active learning. 
+    \item Participate in FLARE22 Challenge of MICCAI and thoroughly study the given datasets and follow all of the challenge's information such as the requirements, evaluation metrics, and previous top methods.
+    \item Conduct research on building an interactive tool, experiment repeatedly to investigate the tool's usability and user experience.
+    \item Implement and inherit code bases to develop our own solution for the task, and considerably benchmark them to prove their effectiveness.
 \end{itemize}

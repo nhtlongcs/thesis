@@ -4,3 +4,53 @@
 For the Reference module, we use the prevalent combination of dice loss and cross entropy loss with smoothing value to alleviate the imbalanced number of the small organs, which occurs due to our splitting into slices process. The same settings are used for CPS in its supervised branch whereas only the dice loss is setup for the unsupervised branch. 
 
 For the Propagation module, we implement the online hard example cross entropy (OhemCE or Bootstrapping CE) \cite{ohemce16wu} and also calculate the Lovasz loss \cite{lovasz18berman} at the same time. OhemCE can help reduce the contribution of background label to the final loss. And since STCN is trained on binary task, OhemCE can direct the model to focus on visible difficult objects. Meanwhile, Lovasz loss is commonly used in the past. 
+
+
+Given y the ground truth mask, and \hat{y} the predicted mask of the model, we reformulate all the losses that we have used in training our networks as below: 
+
+\textbf{Dice loss}
+
+The Dice coefficient is widely used metric in computer vision community to calculate the similarity between two matrices. In recent years, it has also been adapted as loss function known as Dice Loss \cite{sudre2017diceloss}
+
+\begin{align}
+        DL (y, \hat{y}) &= 1 - \frac{2xy+\epsilon}{x+y+\epsilon}
+\end{align}
+
+Here, $\epsilon$ is added in both numerator and denominator to ensure that the function is not undefined in edge case scenarios such as when $x = y = 0$.
+
+\textbf{Cross-entropy loss}
+
+Cross-entropy is a traditional loss function that is widely used for classification objective, and as segmentation is pixel level classification it works well. It is defined in \cite{yi2004ce} as a measure of the difference between two probability distributions for a given random variable or set of events.
+Binary Cross-Entropy is defined as:
+
+\begin{align}
+        L_{BCE} (y, \hat{y}) &= -(y log (\hat{y}) + (1-y)log(1-\hat{y}))
+\end{align}
+
+\textbf{Online hard example cross-entropy loss}
+
+We et. al \cite{ohemce16wu} propose an online bootstrapping method, which forces networks to focus on hard (and so more valuable) pixels during training. 
+
+Let there be $K$ different categories $c_j$ in a label space. For simplicity, suppose that there is only one image crop per mini-batch, and let there be N pixels $a_i$ to predict in this crop. Let $y_i$ denotes the ground truth label of pixel $a_i$
+, and $p_{ij}$ denotes the predicted probability of
+pixel $a_i$ belonging to category $c_j$ . Then, the loss function can be defined as
+
+\begin{align}
+        L_{OhemCE} &= - \frac{1}{\sum_{i}^{N} \sum_{j}^{K} 1 \{y_i = j \text{ and } p_{ij} < t\}} (\sum_{i}^{N} \sum_{j}^{K} 1 \{y_i = j \text{ and } p_{ij} < t\} log p_{ij})
+\end{align}
+
+where t ∈ (0, 1] is a threshold. Here 1{·} equals one when the condition inside holds, and otherwise equals zero. In practice, there should be a reasonable number of pixels kept per mini-batch. Hence, the threshold $t$ will be increased accordingly if the current model performs pretty well on a specific mini-batch.
+
+\textbf{Lovasz-Softmax loss}
+
+ Berman et. al \cite{lovasz18berman} incorporates the softmax operation in the Lovasz extension. Having the similar target as the Dice Loss, The Lovasz extension is a means by which we can achieve direct optimization of the mean intersection-over-union loss in neural networks. In this respect, the Lovasz-Softmax loss can be formulated as follows:
+ 
+ \begin{align}
+        L_{lovasz} &= \frac{1}{|C|} \sum_{c \in C} \overline{\Delta_{J_c}} (m(c)) \\
+        m_i(c) &= \begin{cases}
+                        1 - x_i(c)  & \text{if } c = y_i(c) \\
+                        x_i(c)    & \text{otherwise}
+                    \end{cases}
+\end{align}
+
+where $|C|$ represents the class number, $\Delta_{J_c}$ defines the Lovasz extension of the Jaccard index, $x_i(c) \in [0,1]$ and $y_i (c) \in \{-1,1\}$ hold the predicted probability and ground truth label of pixel $i$ for class $c$, respectively.

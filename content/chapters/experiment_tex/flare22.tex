@@ -1,0 +1,149 @@
+% Dataset and evaluation measures (The authors can either use the default description in the
+% template of write this part by themselves. The dataset-related papers should be cited.)
+% Implementation details
+% Detailed description of training protocols
+
+
+\section{Dataset and evaluation measures}
+
+\subsection{FLARE22 dataset}
+
+The FLARE2022 dataset is curated from more than 20 medical groups under the license permission, including MSD \cite{simpson2019MSD}, KiTS \cite{KiTS,KiTSDataset}, AbdomenCT-1K \cite{AbdomenCT-1K}, and TCIA \cite{clark2013TCIA}. 
+It is extended from the FLARE 2021 Challenge from fully supervised settings to a semi-supervised setting that focuses on how to use unlabeled data. Specifically, they provide a small number of labeled cases (50) and a large number of unlabeled cases (2000) in the training set, 50 visible cases for validation, and 200 hidden cases for testing. The segmentation targets include 13 organs: liver, spleen, pancreas, right kidney, left kidney, stomach, gallbladder, esophagus, aorta, inferior vena cava, right adrenal gland, left adrenal gland, and duodenum. Compare to the FLARE 2021 challenge, the dataset is 4x larger and the segmentations targets are increased to 13 organs.
+
+\subsection{Evaluation metrics}
+
+The evaluation measures consist of two accuracy measures: the region-based Dice Similarity Coefficient (DSC) and the boundary-based Normalized Surface Dice (NSD) \cite{nikolov2018deep}, and three running efficiency measures: running time, area under GPU memory-time curve, and area under CPU utilization-time curve. All measures will be used to compute the ranking. Moreover, the GPU memory consumption has a 2 GB tolerance.
+
+Let $G$, $S$ denote the ground truth and the segmentation result, respectively. $|\partial G|$ and $|\partial S|$ are the number of voxels of the ground truth and the segmentation results, respectively. Both metrics take the scores in $[0, 1]$ and higher
+scores indicate better segmentation performance. We formulate the definitions of the two measures in the two following sections.
+
+\subsubsection{Dice Similarity Coefficient}
+
+The Dice similarity coefficient, also known as the Sørensen–Dice index or simply Dice coefficient, is a statistical function which measures the similarity between two sets of data. The DSC has become arguably the most widely used tool in several segmentation benchmarks \cite{heller2021state}, \cite{bilic2019liver}.  In term of segmentation task, it is used to evaluate the region overlap between the predicted and the target mask. The formulation is as follows:
+
+\begin{align}
+        \text{DSC(G,S)} &= \frac{2|G \cap S|}{|G| + |S|}
+\end{align}
+
+\subsubsection{Normalized surface Dice}
+
+Despite its popularity, DSC does not take boundary precision into account, while that is a crucial aspect in clinical medical tasks. In contrast, NSD is sensitive to this boundary error and is used to evaluate how close the segmentation and ground truth surfaces are to each other at a specified tolerance $\tau$. NSD can be formualzed as below:
+
+\begin{align}
+        \text{NSD(G,S)} &= \frac{|\partial G \cap \mathcal{B}^{\tau}_{\partial S}| +  |\partial S \cap \mathcal{B}^{\tau}_{\partial G}|}{|\partial G| + |\partial S|}
+\end{align}
+
+where $\mathcal{B}^{\tau}_{\partial G} = \{ x \in \mathcal{R}^3 | \exists \tilde{x} \in \partial G, ||x - \tilde{x} || \leq \tau$, $\mathcal{B}^{\tau}_{\partial S} = \{ x \in \mathcal{R}^3 | \exists \tilde{x} \in \partial S, ||x - \tilde{x} || \leq \tau$ denote the border region of the ground truth and the segmentation surface at tolerance $\tau$, respectively. According to \cite{AbdomenCT-1K}, FLARE22 Challenge uses $\tau = 1\text{mm}$.
+
+\subsection{Implementation details}
+\subsubsection{Environment settings}
+The development environments and requirements are presented in Table~\ref{table:env}.
+
+
+\begin{table}[!h]
+\caption{Development environments and requirements.}\label{table:env}
+\centering
+\begin{tabular}{ll}
+\hline
+Windows/Ubuntu version       & Ubuntu 18.04.5 LTS\\
+\hline
+CPU   & Intel(R) Xeon(R) Silver 4210R CPU @ 2.40GHz \\
+\hline
+RAM                         &1$\times $32GB; \\
+\hline
+GPU (number and type)                         & One Quadro RTX 5000 16G\\
+\hline
+CUDA version                  & 11.6\\                          \hline
+Programming language                 & Python 3.10\\ 
+\hline
+Deep learning framework & Pytorch (Torch 1.11.0, torchvision 0.12.0) \\
+
+\hline
+\end{tabular}
+\end{table}
+
+\vspace{-0.5cm}
+
+\subsubsection{Preprocessing protocols}
+
+In the beginning of both training and inference phase, the CT volumes are splitted into slices of 2D images before applying Windowing CT. As mentioned before, we keep the original size of the volumes. Then,for each of these slices, Windowing CT is applied with three different settings to generate three version of each. The three settings aim to highlight three particular parts of the human organs, which are: the chest, the abdomen, and the spine. Detailed configuration is shown in Table \ref{table:window_params}
+
+\subsubsection{Training protocols}
+
+Currently, we find that using only simple 2D transform functions such as horizontal/vertical flipping or rotating might be enough for both modules to generalize. In the training stage, the Reference module follow traditional training process, in which two models are concurrently trained. For the Propagation module, we inherit the same process as in \cite{stcn21cheng} which samples 3 neighboring slices at a time.
+
+Table \ref{table:training1} and Table \ref{table:training2} mention the training protocols for Reference module and Propagation module, respectively. In both settings, we use the original-sized images, which is $[512, 512]$ for the training and inference phases. 
+
+\begin{table*}[!h]
+\caption{Training protocols for Reference module: CPS of TransUnet and Efficientnet DeeplabV3+ }
+\label{table:training1}
+\begin{center}
+% \resizebox{0.47\textwidth}{!}{
+\begin{tabular}{ll} 
+\hline
+Network initialization         & Random initialization\\
+\hline
+Batch size                    & 2 (labeled) $+$ 2 (unlabeled) \\
+\hline 
+Patch size & None  \\ 
+\hline
+Total iterations & 50000 \\
+\hline
+Optimizer          & AdamW          \\ \hline
+Initial learning rate (lr)  & 0.0001 \\ \hline
+Lr decay schedule & multiplied by 0.5 every iteration at $[40000, 45000]$ \\
+\hline
+Training time                                           & 48 hours \\  \hline 
+Number of model parameters & \begin{tabular}[c]{@{}l@{}}105M (TransUnet Resnet50) +\\ 11M  (Efficientnet DeeplabV3+) \footnote{Pytorch}\end{tabular} \\
+\hline
+Number of flops &  \begin{tabular}[c]{@{}l@{}}108G (TransUnet Resnet50) +\\1,3G (Efficientnet DeeplabV3+)  \footnote{Pytorch}\end{tabular} \\
+% {108G (TransUnet Resnet50) + 1,3G (Efficientnet DeeplabV3+)  \footnote{Pytorch}} \\ 
+% & \\
+\hline
+\end{tabular}
+% }
+\end{center}
+\end{table*}
+
+
+\begin{table*}[h]
+\caption{Training protocols for Propagation module: STCN with Resnet backbone }
+\label{table:training2}
+\begin{center}
+% \resizebox{0.47\textwidth}{!}{
+\begin{tabular}{ll} 
+\hline
+Network initialization         & Random initialization\\
+\hline
+Batch size                    & 8 \\
+\hline 
+Patch size & None  \\ 
+\hline
+Total iterations & 50000 \\
+\hline
+Optimizer          & AdamW          \\ \hline
+Initial learning rate (lr)  & 0.0001 \\ \hline
+Lr decay schedule & multiplied by 0.5 every iteration at $[40000, 45000]$ \\
+\hline
+Training time                                           & 48 hours \\  \hline 
+Number of model parameters    & 54,416,065 \footnote{Pytorch} \\ \hline
+\end{tabular}
+
+
+\end{center}
+\end{table*}
+
+\vspace{-0.5cm}
+\subsubsection{Testing protocols}
+
+In the inference phase, after applying windowing CT technique for pre-processing, we then resize all the slices to $512 \times 512$ prior to predicting. When the model generate a mask prediction, which apparently the same size as 512, we interpolate that to the original size.
+
+Initially, in the Reference stage, we do not forward the entire volume since it would increase the GPU resource tremendously. Here, we follow a simple strategy which is uniform sampling. For each CT volume, we sample a slice every 5 steps, then group them as a batch and forward through the Reference module. As mentioned earlier, the Reference module consists of two 2D segmentation models: TransUnet with Resnet50 as backbone and DeeplabV3+ with EfficientNetB3 as backbone, they are used simultaneously to generate the prediction.
+The masks outputed from this module are filtered once more to select only potentially informative slices and its annotation. Another sampling strategy is used here, to pick the possible slices, we iterate through them and calculate the areas of the visible organs. Then for each organ, we choose the slice that have the largest area of it, which leaves us with only 13 candidate slices maximum.
+
+Then comes the Propagation module, with these only 13 slices, this module has to propagate all the information across the remaining slices. This also includes a propagation strategy as well. For each of the annotated slices as the pivot points,
+the module perform bidirectional propagation strategy, then sum them up before finally deciding which classes they are. 
+In more detail, the STCN architecture inside the Propagation module has a memory bank that can store up past information and use them to predict the current input. For every $k_1$ frame, the bank encode the frame and save the information once, then find top $k_2$ encoded frames that is most similar with the current one to generate the mask. In addition, the memory bank gets flushed every $k_3$ frames stored. In all our experiment, we find that $k_1 = 5$, $k_2 = 20$ and $k_3 = 200$ gives best overall results while keeping the GPU memory not overloaded.
+
+Regarding the pseudo-labeling process, we use multiple trained CPS to create a pool of pseudo-labeled data and measure the uncertainty between them. Following the Equation \ref{eqn:uncertainty}, we filter out samples with scores higher than $0.9$ and use them for the next training cycle. The cycle loops until all unlabeled samples become high quality.

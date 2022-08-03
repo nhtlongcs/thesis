@@ -21,11 +21,13 @@
 \end{figure}
 
 Our proposed method contains two main modules, a reference module and a propagation module.
-Firstly, the entire CT volume is processed using windowing CT to get a stack of three-channel slices. \ref{}
-Next, a small yet sufficient amount of potential slices are sampled from the stack using a reference strategy to become candidates. These candidate slices progress through the Reference module to obtain the minimal number of preliminary masks.
-Afterward, the Propagation module disseminates the information deduced from these initial masks to the remaining slices.
+Firstly, the entire CT volume is processed using windowing CT to get a stack of three-channel slices \cite{windowingct17yahya}.
+
+
+Next, a small yet sufficient amount of potential slices are sampled from the stack using a reference strategy to become candidates. These candidate slices progress through the Reference module to obtain the minimal number of preliminary masks (as described in \ref{sec:reference}).
+Afterward, the Propagation module (as described in Section \ref{sec:propagation}) disseminates the information deduced from these initial masks to the remaining slices.
 Ultimately, the result is obtained after the final post-processing stage, which includes re-orientation and converting into appropriate format for later usage.
 
-Furthermore, to effectively create pseudo-labels that are consistent for the unlabeled data, we follow the uncertainty estimation technique based on consensus voting scheme. These pseudo-labels that have high certainty level are used for retraining in the next cycle.
+Furthermore, to effectively create pseudo-labels that are consistent for the unlabeled data, we follow the uncertainty estimation technique based on consensus voting scheme. These pseudo-labels that have high certainty level are used for retraining in the next cycle (as described in \ref{sec:uncertainty}).
 
 The overview of our method is explained in Figure \ref{fig:method_overview}

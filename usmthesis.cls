@@ -633,7 +633,7 @@ HONORS PROGRAM \\
 \MakeTextUppercase{\@degreetype}\par
 \endgroup
 
-\vspace*{160pt}
+\vspace*{100pt}
 HO CHI MINH CITY, \@submityear\par
 %
 %\vspace*{20mm}
@@ -677,7 +677,7 @@ HONORS PROGRAM \\
 \MakeTextUppercase{\@degreetype}\par
 \endgroup
 
-\vspace*{100pt}
+\vspace*{60pt}
 
 \begingroup
 \fontsize{14pt}{16pt}\selectfont%
@@ -690,7 +690,7 @@ THESIS ADVISORS:\\ \@lecturer \par
 
 \begingroup
 \fontsize{14pt}{16pt}\selectfont
-ACADEMIC YEAR 2017-2021
+ACADEMIC YEAR 2018-2022
 \endgroup
 
 \newpage

@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{makecell} 
+\usepackage[utf8]{vietnam}
+
+\begin{document}
+
+% \begin{flushleft}
+Faculty of Information Technology\\
+Honors Program 2018\\
+ 
+\begin{center}
+\textbf{\Large THESIS PROPOSAL}
+\end{center}
+
+ 
+\textbf{Thesis title}: \par
+Semi-Supervised Organ Segmentation for 3D CT Volumes with Mask-Propagation Refinement
+
+\textbf{Thesis advisor}:
+\begin{itemize}
+    \item Associate Professor Tran Minh Triet
+\end{itemize}
+
+\textbf{Duration}: December, 2021 to July, 2022
+
+\textbf{Students}:
+\begin{itemize}
+    \item Phạm Minh Khôi - 18120043
+    \item Nguyễn Hồ Thăng Long - 18120134
+\end{itemize}
+
+\textbf{Type of thesis}: Research with demo application
+
+\textbf{Thesis content}: In organs volume segmentation problem, scanned images from medical equipment are the main source of information that qualitatively support doctors to identify the condition of the patients in order to give better treatment decisions. Nevertheless, this source of data is usually scarce in the number of annotations. Our proposed approach come up with a method of propagating masks between image slices with the least number of annotations while maintaining its effectiveness. Another contribution of ours is the introduction of a labeling tool with the user’s ability to iteratively interact (e.g., scribble or click) to refine the results until satisfaction. Our aim is that doctors will be facilitated with valuable analysis software that provides reasonable suggestions for their patient treatment.
+Our proposed method consists of building a full 2D segmentation pipeline for CT volume medical images, from the rational preprocessing method to the novel two-staged segmentation method and finalize with the user-friendly application.  We list our targets as bullet points below:
+
+
+\textbf{Methods}: \par Our proposed method consists of building a full 2D segmentation pipeline for CT volume medical images, from the rational preprocessing method to the novel two-staged segmentation method and finalize with the user-friendly application.  We list our targets as bullet points below:
+\vspace{-2mm}
+\begin{itemize}
+
+\item In the processing stage, we hope to exploit the expert knowledge of the domain in doing this. With proper data-specific pre-preprocessing method, the medical data should be easier for neural networks to comprehend while providing details that are explainable. 
+
+\item In the reference model, we aim to employ semi-supervised learning and active learning techniques to utilize unlabeled data based on uncertainty estimation to generate pseudo-labeled data and selectively choose valuable data samples for training. 
+
+\itemIn As regards to the propagation module, we aim to adapt the Mask Propagation algorithm to further refine the masks from the reference module while inheriting some of its beneficial properties.
+
+% \item Furthermore, we propose some novel strategies for referencing and propagation to boost up the performance of the algorithm as well. These strategies initially refer to active learning approaches, which stems from the idea about automatically choosing an optimized amount of referencing slices while maximizing the model evaluation. Our method concentrates on both precision and  efficiency for medical images segmentation.
+\item Lastly, we concentrate on deploying a minimal software with user-friendly GUI to apply the proposed segmentation model into practice where doctors and nurses or anyone with medical expertise but lack of programming skills, can easily label patient data by hand.  
+% In addition to that, we aim to integrate a referencing feature inside the application that can propose prominent areas that demand strong attention from the experts.
+\end{itemize}
+
+\textbf{Expected results}: 
+\begin{itemize}
+    \item An efficient method for organ segmentation for 3D CT volumes.
+    \item An annotation tool that can be used easily by people without technical knowledge. 
+%    \item Publishing the research at MICCAI 2022, and possibly presenting for it at the conference. 
+%    \vspace{-4mm}
+    \item Achieving comparable top rank at FLARE 2022, a challenge of the conference MICCAI 2022
+\end{itemize}
+\vspace{8mm}
+\textbf{Research timeline}:
+\begin{itemize}
+    \item \textbf{January-February 2022}: Conduct research for recent mask propagation methods and the previously related works. Simultaneously, intensively investigate the basics of medical subjects and the prevalent applications of AI in this field.
+    \item \textbf{March 2022}: Implement a code template for training and evaluation, try and adapt baseline code from MiVoS, STCN to toy datasets. Search for suitable opening medical challenges from MICCAI 2022’s workshops, results in joining FLARE22.
+    \item \textbf{April 2022}: Analyze FLARE22 datasets, experiment splitting, preprocessing, post-processing for the specific 3D volume data, with reference from top solutions of previous challenge. Visualize every step to avoid fatal bugs and errors before fully training.
+    \item \textbf{May - June 2022}: Full training and evaluating models while constantly suggesting and implementing improvements for the performance models regarding both accuracy and efficiency.
+    \item \textbf{July 2022}: Final submission to FLARE 2022. Develop an application integrated with aforementioned features and AI algorithm. Possibly conduct a number of surveys about the software usability.
+\end{itemize}
+
+\vspace{15pt}
+
+\makecell[c]{\textbf{Advisor} \\ 
+\includegraphics[height=2cm]{content/resources/signatures/tmtriet.png} \\ Assoc. Prof. Trần Minh Triết } & \makecell[c]{\textbf{May 9\textsuperscript{th}, 2022}\\ 
+\textbf{Students} \\ 
+\includegraphics[height=1.5cm]{content/resources/signatures/pmkhoi.png} \\ Phạm Minh Khôi \\
+\includegraphics[height=1.5cm]{content/resources/signatures/nhtlong.jpeg} \\ Nguyễn Hồ Thăng Long} \\ 
+
+
+\end{document}

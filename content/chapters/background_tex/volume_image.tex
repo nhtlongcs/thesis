@@ -1,0 +1,28 @@
+\section{CT Volume Image}
+% ref https://www.ncbi.nlm.nih.gov/books/NBK574548/
+CT images are two-dimensional pictures that represent three-dimensional physical objects. The images are made by converting electrical energy (moving electrons) into X-ray photons, passing the photons through an object, and then converting the measured photons back into electrons. The number of X-rays that pass through the object is inversely proportional to the density of the object. Objects imaged by CT consist of parts that vary in density. 
+
+Image slices can either be displayed individually or stacked together by the computer to generate a 3D image of the patient that shows the skeleton, organs, and tissues as well as any abnormalities the physician is trying to identify. This method has many advantages make doctors easier to find the exact place where a problem may be located or identification of basic structures as well as possible tumors or abnormalities.
+
+\subsection{Digital image representation}
+% - how the computer store the images ?
+In machine computing, image is a well-known definition. The image is construct by multiple pixels, each of them contains multiple values representing its visual information. The value range is often between from 0 to 255, for example it can handle the image brightness or the affect of a specific color (in a colored image). 
+% insert image rgb 
+Every image is define by structure information, such as image shape like channel, width, height. If the number of channel is 1, the image should be grayscale. And in color image, the number of channel would be 3 (corresponding with red, green and blue). And there are multiple variants of image type, like medical image shape would be constructed by width, height and depth. The depth channel could be thousand and pixel value range could be a negative number.
+% insert volume image
+\subsection{Hounsfield Units}
+The CT detectors measure the degree that the scanned tissues physical density, and the image processor storing the data as pixels calculated by to convert byte data into a range of 5000 values. The scale's range of values is named for Hounsfield; each value on the scale is termed a Hounsfield unit (HU). Densities of various substances have been assigned relative values. The density of the substances in the patient (both natural tissues and any medical implants) and around the patient are calculated based on a linear transformation of the measured \textbf{X-ray attenuation coefficients}. This transformation is based on the standard density measurement of two substances, distilled water (set as 0 HU) and air (set as -1000 HU). HU for various scanned tissues are computed from the following equation: 
+\begin{equation}
+    HU = 1000 \times (tissue \mu - water \mu)/ water \mu 
+\end{equation}
+Where $\mu$ is the linear attenuation coefficient. CT scanners used in medical practice can present HU within a range of –1024 HU to +3071 HU. Different publications define different ranges for certain tissues and substances.
+
+% Tissue physical density is proportional to photon attenuation (photon absorption). The CT detectors measure the degree that the scanned tissues attenuate photons (i.e., their density), and the image processor storing the data as bytes converts these values so that displayed pixels have proportionately assigned pixel brightness. A formula for this calculation to convert byte data into a range of 5000 values is used globally.[10][11] 
+
+% The scale's range of values is named for Hounsfield; each value on the scale is termed a Hounsfield unit (HU). Densities of various substances have been assigned relative values, which are termed attenuation coefficients. The density of the substances in the patient (both natural tissues and any medical implants) and around the patient are calculated based on a linear transformation of the measured X-ray attenuation coefficients.[12] This transformation is based on the standard density measurement of two substances, distilled water (set as 0 HU) and air (set as -1000 HU) at 0 degrees Celsius temperature and a pressure of 10 Pascals.[13] HU for various scanned tissues are computed from the following equation: 
+
+% HU =1000 X (tissue μ – water μ)/ water μ, where μ is the linear attenuation coefficient 
+% CT scanners used in medical practice can present HU within a range of –1024 HU to +3071 HU.[14] Interpretation of clinical images often depends on evaluating a structure's HU, such as differentiating vascular lesions (which are dense when filled with contrast) from non-vascular lesions and distinguishing acute hemorrhage (which is dense) vs. non-acute hemorrhage or other substances. Different publications define different ranges for certain tissues and substances, for example: 
+
+
+% \subsection{Image Windowing}

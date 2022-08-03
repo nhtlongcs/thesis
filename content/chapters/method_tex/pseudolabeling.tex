@@ -11,13 +11,14 @@
 Given a vast amount of unlabeled CT volumes, we apply a uncertainty estimation technique to effectively maximize the utilization of the data.
 
 Firstly, several CPS models are trained on the provided labeled data.
-Then, we use these trained CPS models to obtain pseudo masks on the unlabeled set. Inspired from \cite{wang2019active}, we calculate the dice scores between these pseudo masks and the aggregated one. The mean of these dice scores will be compared with a threshold to determine whether the aggregated pseudo masks are qualified. Simply speaking, consensus-based assessment is used to evaluate the quality of pseudo labels.
+Then, we use these trained CPS models to obtain pseudo masks on the unlabeled set. Inspired from \cite{wang2019twostagequery}, we calculate the dice scores between these pseudo masks and the aggregated one. The mean of these dice scores will be compared with a threshold to determine whether the aggregated pseudo masks are qualified. Simply speaking, consensus-based assessment is used to evaluate the quality of pseudo labels.
 
 We determine a single score for the $i^{th}$ volume in the unlabeled set as the formulation below:
 
 \begin{align}
         score_{i} &= \frac{1}{K \times M} \sum_{k=1}^{K^{i}} \sum_{m=1}^{M} \text{DSC}(\mathcal{Y}^{k,i}_{m}, \mathcal{Y}^{k,i}_{AVG}) \\
         \text{dsc}  &= \frac{2 |X \cap Y|}{|X| + |Y|}
+        \label{eqn:uncertainty}
 \end{align}
 
 DSC represents the Dice Score evaluation metric calculating the overlapping area of prediction $X$ and ground truth $Y$. 

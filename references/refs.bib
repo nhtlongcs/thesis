@@ -1,7 +1,481 @@
-% METHODS
+% BACKGROUND 
+
+@article{lecun1989backpropagation,
+  title={Backpropagation applied to handwritten zip code recognition},
+  author={LeCun, Yann and Boser, Bernhard and Denker, John S and Henderson, Donnie and Howard, Richard E and Hubbard, Wayne and Jackel, Lawrence D},
+  journal={Neural computation},
+  volume={1},
+  number={4},
+  pages={541--551},
+  year={1989},
+  publisher={MIT Press}
+}
+
+@article{sutskever2014sequence,
+  title={Sequence to sequence learning with neural networks},
+  author={Sutskever, Ilya and Vinyals, Oriol and Le, Quoc V},
+  journal={Advances in neural information processing systems},
+  volume={27},
+  year={2014}
+}
+
+@article{krizhevsky2012imagenet,
+  title={Imagenet classification with deep convolutional neural networks},
+  author={Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+  journal={Advances in neural information processing systems},
+  volume={25},
+  year={2012}
+}
+
+@ARTICLE{samuel2000gameofcheckers,
+  author={Samuel, A. L.},
+  journal={IBM Journal of Research and Development}, 
+  title={Some studies in machine learning using the game of checkers}, 
+  year={2000},
+  volume={44},
+  number={1.2},
+  pages={206-226},
+  doi={10.1147/rd.441.0206}}
+
+@book{mitchell1997machine,
+  title={Machine learning},
+  author={Mitchell, Tom M and Mitchell, Tom M},
+  volume={1},
+  number={9},
+  year={1997},
+  publisher={McGraw-hill New York}
+}
+
+@book{goodfellow2016deep,
+  title={Deep learning},
+  author={Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron},
+  year={2016},
+  publisher={MIT press}
+}
+
+@article{sutton1998introduction,
+  title={Introduction to reinforcement learning},
+  author={Sutton, Richard S and Barto, Andrew G and others},
+  year={1998},
+  publisher={MIT press Cambridge}
+}
+
+@article{silver2016mastering,
+  title={Mastering the game of Go with deep neural networks and tree search},
+  author={Silver, David and Huang, Aja and Maddison, Chris J and Guez, Arthur and Sifre, Laurent and Van Den Driessche, George and Schrittwieser, Julian and Antonoglou, Ioannis and Panneershelvam, Veda and Lanctot, Marc and others},
+  journal={nature},
+  volume={529},
+  number={7587},
+  pages={484--489},
+  year={2016},
+  publisher={Nature Publishing Group}
+}
+
+@article{jain2013google,
+  title={Google self-driving cars},
+  author={Jain, Abhishek and Jiang, Jing and Lui, Jonathan and D'Souza, Rohit and Limarta, Standley},
+  year={2013}
+}
+
+@article{rosenblatt1958perceptron,
+  title={The perceptron: a probabilistic model for information storage and organization in the brain.},
+  author={Rosenblatt, Frank},
+  journal={Psychological review},
+  volume={65},
+  number={6},
+  pages={386},
+  year={1958},
+  publisher={American Psychological Association}
+}
+
+@techreport{rosenblatt1961principles,
+  title={Principles of neurodynamics. perceptrons and the theory of brain mechanisms},
+  author={Rosenblatt, Frank},
+  year={1961},
+  institution={Cornell Aeronautical Lab Inc Buffalo NY}
+}
+
+@incollection{bottou2010large,
+  title={Large-scale machine learning with stochastic gradient descent},
+  author={Bottou, L{\'e}on},
+  booktitle={Proceedings of COMPSTAT'2010},
+  pages={177--186},
+  year={2010},
+  publisher={Springer}
+}
+
+@article{kingma2014adam,
+  title={Adam: A method for stochastic optimization},
+  author={Kingma, Diederik P and Ba, Jimmy},
+  journal={arXiv preprint arXiv:1412.6980},
+  year={2014}
+}
+
+% PREPROCESS
+
+@misc{windowingct17yahya, title={Windowing (CT)}, url={http://dx.doi.org/10.53347/rID-52108}, DOI={10.53347/rid-52108}, journal={Radiopaedia.org}, publisher={Radiopaedia.org}, author={Baba, Yahya and Murphy, Andrew}, year={2017}, month={Mar} }
+
+% POSITIONAL ENCODING
+
+@article{krizhevsky2012imagenet,
+  title={Imagenet classification with deep convolutional neural networks},
+  author={Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+  journal={Advances in neural information processing systems},
+  volume={25},
+  year={2012}
+}
+
+@inproceedings{jung2020global,
+  title={Global-and-local relative position embedding for unsupervised video summarization},
+  author={Jung, Yunjae and Cho, Donghyeon and Woo, Sanghyun and Kweon, In So},
+  booktitle={European Conference on Computer Vision},
+  pages={167--183},
+  year={2020},
+  organization={Springer}
+}
+
+@article{shaw2018self,
+  title={Self-attention with relative position representations},
+  author={Shaw, Peter and Uszkoreit, Jakob and Vaswani, Ashish},
+  journal={arXiv preprint arXiv:1803.02155},
+  year={2018}
+}
+
+@article{mirza2014cgan,
+  title={Conditional generative adversarial nets},
+  author={Mirza, Mehdi and Osindero, Simon},
+  journal={arXiv preprint arXiv:1411.1784},
+  year={2014}
+}
+
+@inproceedings{anderson2018bottom,
+  title={Bottom-up and top-down attention for image captioning and visual question answering},
+  author={Anderson, Peter and He, Xiaodong and Buehler, Chris and Teney, Damien and Johnson, Mark and Gould, Stephen and Zhang, Lei},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={6077--6086},
+  year={2018}
+}
+
+@inproceedings{messina2021transformer,
+  title={Transformer reasoning network for image-text matching and retrieval},
+  author={Messina, Nicola and Falchi, Fabrizio and Esuli, Andrea and Amato, Giuseppe},
+  booktitle={2020 25th International Conference on Pattern Recognition (ICPR)},
+  pages={5222--5229},
+  year={2021},
+  organization={IEEE}
+}
+
+@inproceedings{karpathy2014large,
+  title={Large-scale video classification with convolutional neural networks},
+  author={Karpathy, Andrej and Toderici, George and Shetty, Sanketh and Leung, Thomas and Sukthankar, Rahul and Fei-Fei, Li},
+  booktitle={Proceedings of the IEEE conference on Computer Vision and Pattern Recognition},
+  pages={1725--1732},
+  year={2014}
+}
+
+@article{hochreiter1997long,
+  title={Long short-term memory},
+  author={Hochreiter, Sepp and Schmidhuber, J{\"u}rgen},
+  journal={Neural computation},
+  volume={9},
+  number={8},
+  pages={1735--1780},
+  year={1997},
+  publisher={MIT Press}
+}
+
+@article{cho2014properties,
+  title={On the properties of neural machine translation: Encoder-decoder approaches},
+  author={Cho, Kyunghyun and Van Merri{\"e}nboer, Bart and Bahdanau, Dzmitry and Bengio, Yoshua},
+  journal={arXiv preprint arXiv:1409.1259},
+  year={2014}
+}
+
+@article{vaswani2017attention,
+  title={Attention is all you need},
+  author={Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  journal={Advances in neural information processing systems},
+  volume={30},
+  year={2017}
+}
+
+@article{sukhbaatar2015end,
+  title={End-to-end memory networks},
+  author={Sukhbaatar, Sainbayar and Weston, Jason and Fergus, Rob and others},
+  journal={Advances in neural information processing systems},
+  volume={28},
+  year={2015}
+}
+
+@inproceedings{gehring2017convolutional,
+  title={Convolutional sequence to sequence learning},
+  author={Gehring, Jonas and Auli, Michael and Grangier, David and Yarats, Denis and Dauphin, Yann N},
+  booktitle={International conference on machine learning},
+  pages={1243--1252},
+  year={2017},
+  organization={PMLR}
+}
 
 
+% DATASET
 
+@article{ma2021abdomenct,
+  title={Abdomenct-1k: Is abdominal organ segmentation a solved problem},
+  author={Ma, Jun and Zhang, Yao and Gu, Song and Zhu, Cheng and Ge, Cheng and Zhang, Yichi and An, Xingle and Wang, Congcong and Wang, Qiyuan and Liu, Xin and others},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2021},
+  publisher={IEEE}
+}
+
+% METRIC EVALUATION
+
+@article{nikolov2018deep,
+  title={Deep learning to achieve clinically applicable segmentation of head and neck anatomy for radiotherapy},
+  author={Nikolov, Stanislav and Blackwell, Sam and Zverovitch, Alexei and Mendes, Ruheena and Livne, Michelle and De Fauw, Jeffrey and Patel, Yojan and Meyer, Clemens and Askham, Harry and Romera-Paredes, Bernardino and others},
+  journal={arXiv preprint arXiv:1809.04430},
+  year={2018}
+}
+
+@article{bilic2019liver,
+  title={The liver tumor segmentation benchmark (lits)},
+  author={Bilic, Patrick and Christ, Patrick Ferdinand and Vorontsov, Eugene and Chlebus, Grzegorz and Chen, Hao and Dou, Qi and Fu, Chi-Wing and Han, Xiao and Heng, Pheng-Ann and Hesser, J{\"u}rgen and others},
+  journal={arXiv preprint arXiv:1901.04056},
+  year={2019}
+}
+
+@article{heller2021state,
+  title={The state of the art in kidney and kidney tumor segmentation in contrast-enhanced CT imaging: Results of the KiTS19 challenge},
+  author={Heller, Nicholas and Isensee, Fabian and Maier-Hein, Klaus H and Hou, Xiaoshuai and Xie, Chunmei and Li, Fengyi and Nan, Yang and Mu, Guangrui and Lin, Zhiyong and Han, Miofei and others},
+  journal={Medical image analysis},
+  volume={67},
+  pages={101821},
+  year={2021},
+  publisher={Elsevier}
+}
+
+
+% LOSS FUNCTION
+
+@inproceedings{yi2004ce,
+  title={Automated image segmentation using improved PCNN model based on cross-entropy},
+  author={Yi-de, Ma and Qing, Liu and Zhi-Bai, Qian},
+  booktitle={Proceedings of 2004 International Symposium on Intelligent Multimedia, Video and Speech Processing, 2004.},
+  pages={743--746},
+  year={2004},
+  organization={IEEE}
+}
+
+@incollection{sudre2017diceloss,
+  title={Generalised dice overlap as a deep learning loss function for highly unbalanced segmentations},
+  author={Sudre, Carole H and Li, Wenqi and Vercauteren, Tom and Ourselin, Sebastien and Jorge Cardoso, M},
+  booktitle={Deep learning in medical image analysis and multimodal learning for clinical decision support},
+  pages={240--248},
+  year={2017},
+  publisher={Springer}
+}
+
+@article{ohemce16wu,
+  author    = {Zifeng Wu and
+               Chunhua Shen and
+               Anton van den Hengel},
+  title     = {High-performance Semantic Segmentation Using Very Deep Fully Convolutional
+               Networks},
+  journal   = {CoRR},
+  volume    = {abs/1604.04339},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1604.04339},
+  eprinttype = {arXiv},
+  eprint    = {1604.04339},
+  timestamp = {Mon, 13 Aug 2018 16:47:08 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/WuSH16a.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{lovasz18berman,
+  author    = {Maxim Berman and
+               Amal Rannen Triki and
+               Matthew B. Blaschko},
+  title     = {The Lov{\'{a}}sz-Softmax Loss: {A} Tractable Surrogate for the
+               Optimization of the Intersection-Over-Union Measure in Neural Networks},
+  booktitle = {2018 {IEEE} Conference on Computer Vision and Pattern Recognition,
+               {CVPR} 2018, Salt Lake City, UT, USA, June 18-22, 2018},
+  pages     = {4413--4421},
+  publisher = {Computer Vision Foundation / {IEEE} Computer Society},
+  year      = {2018},
+  url       = {http://openaccess.thecvf.com/content\_cvpr\_2018/html/Berman\_The\_LovaSz-Softmax\_Loss\_CVPR\_2018\_paper.html},
+  doi       = {10.1109/CVPR.2018.00464},
+  timestamp = {Tue, 31 Aug 2021 14:00:32 +0200},
+  biburl    = {https://dblp.org/rec/conf/cvpr/BermanTB18.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+% SEGMENTATION MODELS
+
+@inproceedings{stcn21cheng,
+  author    = {Ho Kei Cheng and
+               Yu{-}Wing Tai and
+               Chi{-}Keung Tang},
+  editor    = {Marc'Aurelio Ranzato and
+               Alina Beygelzimer and
+               Yann N. Dauphin and
+               Percy Liang and
+               Jennifer Wortman Vaughan},
+  title     = {Rethinking Space-Time Networks with Improved Memory Coverage for Efficient
+               Video Object Segmentation},
+  booktitle = {Advances in Neural Information Processing Systems 34: Annual Conference
+               on Neural Information Processing Systems 2021, NeurIPS 2021, December
+               6-14, 2021, virtual},
+  pages     = {11781--11794},
+  year      = {2021},
+  url       = {https://proceedings.neurips.cc/paper/2021/hash/61b4a64be663682e8cb037d9719ad8cd-Abstract.html},
+  timestamp = {Tue, 03 May 2022 16:20:47 +0200},
+  biburl    = {https://dblp.org/rec/conf/nips/ChengTT21.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{transunet21chen,
+  author    = {Jieneng Chen and
+               Yongyi Lu and
+               Qihang Yu and
+               Xiangde Luo and
+               Ehsan Adeli and
+               Yan Wang and
+               Le Lu and
+               Alan L. Yuille and
+               Yuyin Zhou},
+  title     = {TransUNet: Transformers Make Strong Encoders for Medical Image Segmentation},
+  journal   = {CoRR},
+  volume    = {abs/2102.04306},
+  year      = {2021},
+  url       = {https://arxiv.org/abs/2102.04306},
+  eprinttype = {arXiv},
+  eprint    = {2102.04306},
+  timestamp = {Mon, 12 Apr 2021 14:40:33 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2102-04306.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{dlv3p18chen,
+  author    = {Liang{-}Chieh Chen and
+               Yukun Zhu and
+               George Papandreou and
+               Florian Schroff and
+               Hartwig Adam},
+  editor    = {Vittorio Ferrari and
+               Martial Hebert and
+               Cristian Sminchisescu and
+               Yair Weiss},
+  title     = {Encoder-Decoder with Atrous Separable Convolution for Semantic Image
+               Segmentation},
+  booktitle = {Computer Vision - {ECCV} 2018 - 15th European Conference, Munich,
+               Germany, September 8-14, 2018, Proceedings, Part {VII}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {11211},
+  pages     = {833--851},
+  publisher = {Springer},
+  year      = {2018},
+  url       = {https://doi.org/10.1007/978-3-030-01234-2\_49},
+  doi       = {10.1007/978-3-030-01234-2\_49},
+  timestamp = {Tue, 14 May 2019 10:00:45 +0200},
+  biburl    = {https://dblp.org/rec/conf/eccv/ChenZPSA18.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+% DATASET
+@article{simpson2019MSD,
+  title={A large annotated medical image dataset for the development and evaluation of segmentation algorithms},
+  author={Simpson, Amber L and Antonelli, Michela and Bakas, Spyridon and Bilello, Michel and Farahani, Keyvan and Van Ginneken, Bram and Kopp-Schneider, Annette and Landman, Bennett A and Litjens, Geert and Menze, Bjoern and others},
+  journal={arXiv preprint arXiv:1902.09063},
+  year={2019}
+}
+@article{KiTSDataset,
+  title={An international challenge to use artificial intelligence to define the state-of-the-art in kidney and kidney tumor segmentation in CT imaging.},
+  author={Heller, Nicholas and McSweeney, Sean and Peterson, Matthew Thomas and Peterson, Sarah and Rickman, Jack and Stai, Bethany and Tejpaul, Resha and Oestreich, Makinna and Blake, Paul and Rosenberg, Joel and others},
+  volume = {38},
+    number = {6},
+    pages = {626-626},
+    year = {2020},
+  journal={American Society of Clinical Oncology}
+}
+@misc{NIHPancreas,
+  title = {{NIH Pancreas}},
+  howpublished = "\url{https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT}",
+  year = {2020},
+  note = "[Online; Accessed: Aug. 2020]"
+}
+@inproceedings{ronneberger2015u,
+  title={U-net: Convolutional networks for biomedical image segmentation},
+  author={Ronneberger, Olaf and Fischer, Philipp and Brox, Thomas},
+  booktitle={International Conference on Medical image computing and computer-assisted intervention},
+  pages={234--241},
+  year={2015}
+}
+
+@article{AbdomenCT-1K,
+  title={AbdomenCT-1K: Is Abdominal Organ Segmentation A Solved Problem?},
+  author={Ma, Jun and Zhang, Yao and Gu, Song and Zhu, Cheng and Ge, Cheng and Zhang, Yichi and An, Xingle and Wang, Congcong and Wang, Qiyuan and Liu, Xin and Cao, Shucheng and Zhang, Qi and Liu, Shangqing and Wang, Yunpeng and Li, Yuhui and He, Jian and Yang, Xiaoping},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2021},
+  doi={10.1109/TPAMI.2021.3100536}
+}
+
+
+@article{isensee2021nnu,
+  title={nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation},
+  author={Isensee, Fabian and Jaeger, Paul F and Kohl, Simon AA and Petersen, Jens and Maier-Hein, Klaus H},
+  journal={Nature Methods},
+  volume={18},
+  number={2},
+  pages={203--211},
+  year={2021}
+}
+
+@article{LossOdyssey,
+title = {Loss Odyssey in Medical Image Segmentation},
+journal = {Medical Image Analysis},
+volume = {71},
+pages = {102035},
+year = {2021},
+author = {Jun Ma and Jianan Chen and Matthew Ng and Rui Huang and Yu Li and Chen Li and Xiaoping Yang and Anne L. Martel}
+}
+
+@article{bilic2019lits,
+  title={The liver tumor segmentation benchmark (lits)},
+  author={Bilic, Patrick and Christ, Patrick Ferdinand and Vorontsov, Eugene and Chlebus, Grzegorz and Chen, Hao and Dou, Qi and Fu, Chi-Wing and Han, Xiao and Heng, Pheng-Ann and Hesser, J{\"u}rgen and others},
+  journal={arXiv preprint arXiv:1901.04056},
+  year={2019}
+}
+
+
+@article{KiTS,
+  title={The state of the art in kidney and kidney tumor segmentation in contrast-enhanced CT imaging: Results of the KiTS19 Challenge},
+  author={Heller, Nicholas and Isensee, Fabian and Maier-Hein, Klaus H and Hou, Xiaoshuai and Xie, Chunmei and Li, Fengyi and Nan, Yang and Mu, Guangrui and Lin, Zhiyong and Han, Miofei and others},
+  journal={Medical Image Analysis},
+  volume={67},
+  pages={101821},
+  year={2021},
+}
+@misc{roth9data,
+  title={Data from Pancreas-CT. The Cancer Imaging Archive (2016)},
+  author={Roth, H and Farag, A and Turkbey, EB and Lu, L and Liu, J and Summers, RM}
+}
+@inproceedings{roth2015deeporgan,
+  title={Deeporgan: Multi-level deep convolutional networks for automated pancreas segmentation},
+  author={Roth, Holger R and Lu, Le and Farag, Amal and Shin, Hoo-Chang and Liu, Jiamin and Turkbey, Evrim B and Summers, Ronald M},
+  booktitle={International conference on medical image computing and computer-assisted intervention},
+  pages={556--564},
+  year={2015},
+  organization={Springer}
+}
+@article{clark2013TCIA,
+  title={The Cancer Imaging Archive (TCIA): maintaining and operating a public information repository},
+  author={Clark, Kenneth and Vendt, Bruce and Smith, Kirk and Freymann, John and Kirby, Justin and Koppel, Paul and Moore, Stephen and Phillips, Stanley and Maffitt, David and Pringle, Michael and others},
+  journal={Journal of Digital Imaging},
+  volume={26},
+  number={6},
+  pages={1045--1057},
+  year={2013}
+}
 
 % SEMI-SUPERVISED LEARNING
 
@@ -45,7 +519,7 @@
 }
 
 
-@inproceedings{chen2020naivestudent
+@inproceedings{chen2020naivestudent,
   author    = {Liang{-}Chieh Chen and
                Raphael Gontijo Lopes and
                Bowen Cheng and
@@ -96,7 +570,7 @@
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
-@inproceedings{zoph2020rethinking
+@inproceedings{zoph2020rethinking,
   author    = {Barret Zoph and
                Golnaz Ghiasi and
                Tsung{-}Yi Lin and
@@ -521,7 +995,17 @@
 
 % ACTIVE LEARNING
 
-@inproceedings{mahajan2018exploring
+@INPROCEEDINGS{wang2019twostagequery,
+  author={Wang, Jiacheng and Chen, Zhaocai and Wang, Liansheng and Zhou, Qichao},
+  booktitle={2019 International Conference on Medical Imaging Physics and Engineering (ICMIPE)}, 
+  title={An Active Learning with Two-step Query for Medical Image Segmentation}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={1-5},
+  doi={10.1109/ICMIPE47306.2019.9098222}}
+  
+@inproceedings{mahajan2018exploring,
   author    = {Dhruv Mahajan and
                Ross B. Girshick and
                Vignesh Ramanathan and
@@ -573,7 +1057,7 @@
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
-@inproceedings{atlas1989trainingconnectionist
+@inproceedings{atlas1989trainingconnectionist,
   author    = {Les E. Atlas and
                David A. Cohn and
                Richard E. Ladner},
@@ -777,6 +1261,214 @@
 }
 
 % SECTION RELATED WORKS
+
+
+% SUBSECTION % SEMI-SUPERVISED VIDEO OBJECT SEGMENTATION 
+
+@inproceedings{caelles2017one,
+  title={One-shot video object segmentation},
+  author={Caelles, Sergi and Maninis, Kevis-Kokitsi and Pont-Tuset, Jordi and Leal-Taix{\'e}, Laura and Cremers, Daniel and Van Gool, Luc},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={221--230},
+  year={2017}
+}
+
+@inproceedings{xiao2018monet,
+  title={Monet: Deep motion exploitation for video object segmentation},
+  author={Xiao, Huaxin and Feng, Jiashi and Lin, Guosheng and Liu, Yu and Zhang, Maojun},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={1140--1148},
+  year={2018}
+}
+
+@article{voigtlaender2017online,
+  title={Online adaptation of convolutional neural networks for video object segmentation},
+  author={Voigtlaender, Paul and Leibe, Bastian},
+  journal={arXiv preprint arXiv:1706.09364},
+  year={2017}
+}
+
+@inproceedings{perazzi2017learning,
+  title={Learning video object segmentation from static images},
+  author={Perazzi, Federico and Khoreva, Anna and Benenson, Rodrigo and Schiele, Bernt and Sorkine-Hornung, Alexander},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={2663--2672},
+  year={2017}
+}
+
+@inproceedings{luiten2018premvos,
+  title={Premvos: Proposal-generation, refinement and merging for video object segmentation},
+  author={Luiten, Jonathon and Voigtlaender, Paul and Leibe, Bastian},
+  booktitle={Asian Conference on Computer Vision},
+  pages={565--580},
+  year={2018},
+  organization={Springer}
+}
+
+@article{hu2017maskrnn,
+  title={Maskrnn: Instance level video object segmentation},
+  author={Hu, Yuan-Ting and Huang, Jia-Bin and Schwing, Alexander},
+  journal={Advances in neural information processing systems},
+  volume={30},
+  year={2017}
+}
+
+@inproceedings{ventura2019rvos,
+  title={Rvos: End-to-end recurrent network for video object segmentation},
+  author={Ventura, Carles and Bellver, Miriam and Girbau, Andreu and Salvador, Amaia and Marques, Ferran and Giro-i-Nieto, Xavier},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={5277--5286},
+  year={2019}
+}
+
+@inproceedings{jang2017online,
+  title={Online video object segmentation via convolutional trident network},
+  author={Jang, Won-Dong and Kim, Chang-Su},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={5849--5858},
+  year={2017}
+}
+
+@inproceedings{wang2019fast,
+  title={Fast online object tracking and segmentation: A unifying approach},
+  author={Wang, Qiang and Zhang, Li and Bertinetto, Luca and Hu, Weiming and Torr, Philip HS},
+  booktitle={Proceedings of the IEEE/CVF conference on Computer Vision and Pattern Recognition},
+  pages={1328--1338},
+  year={2019}
+}
+
+@inproceedings{chen2020state,
+  title={State-aware tracker for real-time video object segmentation},
+  author={Chen, Xi and Li, Zuoxin and Yuan, Ye and Yu, Gang and Shen, Jianxin and Qi, Donglian},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9384--9393},
+  year={2020}
+}
+
+@inproceedings{huang2020fast,
+  title={Fast video object segmentation with temporal aggregation network and dynamic template matching},
+  author={Huang, Xuhua and Xu, Jiarui and Tai, Yu-Wing and Tang, Chi-Keung},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={8879--8889},
+  year={2020}
+}
+
+@inproceedings{voigtlaender2019feelvos,
+  title={Feelvos: Fast end-to-end embedding learning for video object segmentation},
+  author={Voigtlaender, Paul and Chai, Yuning and Schroff, Florian and Adam, Hartwig and Leibe, Bastian and Chen, Liang-Chieh},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9481--9490},
+  year={2019}
+}
+
+@inproceedings{yang2020collaborative,
+  title={Collaborative video object segmentation by foreground-background integration},
+  author={Yang, Zongxin and Wei, Yunchao and Yang, Yi},
+  booktitle={European Conference on Computer Vision},
+  pages={332--348},
+  year={2020},
+  organization={Springer}
+}
+
+@article{loshchilov2017decoupled,
+  title={Decoupled weight decay regularization},
+  author={Loshchilov, Ilya and Hutter, Frank},
+  journal={arXiv preprint arXiv:1711.05101},
+  year={2017}
+}
+
+@inproceedings{oh2019stm,
+  title={Video object segmentation using space-time memory networks},
+  author={Oh, Seoung Wug and Lee, Joon-Young and Xu, Ning and Kim, Seon Joo},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={9226--9235},
+  year={2019}
+}
+
+@inproceedings{duarte2019capsulevos,
+  title={Capsulevos: Semi-supervised video object segmentation using capsule routing},
+  author={Duarte, Kevin and Rawat, Yogesh S and Shah, Mubarak},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={8480--8489},
+  year={2019}
+}
+
+@inproceedings{ge2021video,
+  title={Video object segmentation using global and instance embedding learning},
+  author={Ge, Wenbin and Lu, Xiankai and Shen, Jianbing},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={16836--16845},
+  year={2021}
+}
+
+@article{cheng2021stcn,
+  title={Rethinking space-time networks with improved memory coverage for efficient video object segmentation},
+  author={Cheng, Ho Kei and Tai, Yu-Wing and Tang, Chi-Keung},
+  journal={Advances in Neural Information Processing Systems},
+  volume={34},
+  pages={11781--11794},
+  year={2021}
+}
+
+@article{cheng2022xmem,
+  title={XMem: Long-Term Video Object Segmentation with an Atkinson-Shiffrin Memory Model},
+  author={Cheng, Ho Kei and Schwing, Alexander G},
+  journal={arXiv preprint arXiv:2207.07115},
+  year={2022}
+}
+
+@article{yang2022associating,
+  title={Associating Objects with Scalable Transformers for Video Object Segmentation},
+  author={Yang, Zongxin and Miao, Jiaxu and Wang, Xiaohan and Wei, Yunchao and Yang, Yi},
+  journal={arXiv preprint arXiv:2203.11442},
+  year={2022}
+}
+
+@inproceedings{badrinarayanan2010label,
+  title={Label propagation in video sequences},
+  author={Badrinarayanan, Vijay and Galasso, Fabio and Cipolla, Roberto},
+  booktitle={2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition},
+  pages={3265--3272},
+  year={2010},
+  organization={IEEE}
+}
+
+@inproceedings{vijayanarasimhan2012active,
+  title={Active frame selection for label propagation in videos},
+  author={Vijayanarasimhan, Sudheendra and Grauman, Kristen},
+  booktitle={European conference on computer vision},
+  pages={496--509},
+  year={2012},
+  organization={Springer}
+}
+
+@inproceedings{avinash2014seamseg,
+  title={Seamseg: Video object segmentation using patch seams},
+  author={Avinash Ramakanth, S and Venkatesh Babu, R},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={376--383},
+  year={2014}
+}
+
+@inproceedings{seong2020kernelized,
+  title={Kernelized memory network for video object segmentation},
+  author={Seong, Hongje and Hyun, Junhyuk and Kim, Euntai},
+  booktitle={European Conference on Computer Vision},
+  pages={629--645},
+  year={2020},
+  organization={Springer}
+}
+
+@inproceedings{cheng2021mivos,
+  title={Modular interactive video object segmentation: Interaction-to-mask, propagation and difference-aware fusion},
+  author={Cheng, Ho Kei and Tai, Yu-Wing and Tang, Chi-Keung},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={5559--5568},
+  year={2021}
+}
+
+
+
 % SUBSECTION SEGMENTATION
 
 @article{FCN,
@@ -906,4 +1598,20 @@
   biburl    = {https://dblp.org/rec/journals/corr/abs-2102-04306.bib},
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
+
+% TOOLS
+
+@ARTICLE{py06itksnap,
+  author = {Paul A. Yushkevich and Joseph Piven and Cody Hazlett, Heather and
+    Gimpel Smith, Rachel and Sean Ho and James C. Gee and Guido Gerig},
+  title = {User-Guided {3D} Active Contour Segmentation of
+    Anatomical Structures: Significantly Improved Efficiency and Reliability},
+  journal = {Neuroimage},
+  year = {2006},
+  volume = {31},
+  number = {3},
+  pages = {1116--1128},
+}
+
+
 

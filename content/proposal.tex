@@ -1,7 +1,7 @@
 \chapter{Thesis Proposal}
 \begin{longtable}{|p{{{80mm}}}|c|}
 \hline
-\multicolumn{2}{|m{\linewidth}|}{\textbf{Thesis title}: SMART MEDICAL ASSISTANCE WITH DEEP VISION}\\
+\multicolumn{2}{|m{\linewidth}|}{\textbf{Thesis title}: Semi-Supervised Organ Segmentation for 3D CT Volumes with Mask-Propagation Refinement}\\
 \hline
 \multicolumn{2}{|m{\linewidth}|}{\textbf{Advisor}: Assoc. Prof. Trần Minh Triết} \\
 \hline
@@ -24,55 +24,87 @@
 % exploiting a limited amount of labeled 
 % Example: 
 In organs volume segmentation problem, scanned images from medical equipment are the main source of information that qualitatively support doctors to identify the condition of the patients in order to give better treatment decisions. Nevertheless, this source of data is usually scarce in the number of annotations. Our proposed approach come up with a method of propagating masks between image slices with the least number of annotations while maintaining its effectiveness. Another contribution of ours is the introduction of a labeling tool with the user’s ability to iteratively interact (e.g., scribble or click) to refine the results until satisfaction. Our aim is that doctors will be facilitated with valuable analysis software that provides reasonable suggestions for their patient treatment.
-
 }\\
 \hline
 \multicolumn{2}{|m{\linewidth}|}{\textbf{Methods}:\par
-\lipsum[1]
+
 % Để tiếp cận bài toán, các hướng đề xuất được triển khai bao gồm
 % 0. Xây dựng flow chuẩn hoá dữ liệu CT 
 % 1. Xây dựng mô hình 2d segmentation. Kết hợp cùng kĩ thuật training semi sup + active learning để tận dụng dữ liệu không nhãn có chọn lọc dựa trên cấu trúc, diện tích và độ certainty để chọn lựa các valuable frames. 
 % 2. Tiến hành thiết kế mô hình lan truyền, sử dụng mask propagation + diffusion cho việc nội suy nhãn dán cho các frame kề nhau để mô hình học được từ expert.
 
+% 
 
+Our proposed method consists of building a full 2D segmentation pipeline for CT volume medical images, from the rational preprocessing method to the novel two-staged segmentation method and finalize with the user-friendly application.  We list our targets as bullet points below:
+\vspace{-2mm}
+\begin{itemize}
+
+\item In the processing stage, we hope to exploit the expert knowledge of the domain in doing this. With proper data-specific pre-preprocessing method, the medical data should be easier for neural networks to comprehend while providing details that are explainable. 
+\vspace{-4mm}
+
+\item In the reference model, we aim to employ semi-supervised learning and active learning techniques to utilize unlabeled data based on uncertainty estimation to generate pseudo-labeled data and selectively choose valuable data samples for training. 
+\vspace{-4mm}
+
+\itemIn As regards to the propagation module, we aim to adapt the Mask Propagation algorithm to further refine the masks from the reference module while inheriting some of its beneficial properties.
+\vspace{-4mm}
+
+% \item Furthermore, we propose some novel strategies for referencing and propagation to boost up the performance of the algorithm as well. These strategies initially refer to active learning approaches, which stems from the idea about automatically choosing an optimized amount of referencing slices while maximizing the model evaluation. Our method concentrates on both precision and  efficiency for medical images segmentation.
+\item Lastly, we concentrate on deploying a minimal software with user-friendly GUI to apply the proposed segmentation model into practice where doctors and nurses or anyone with medical expertise but lack of programming skills, can easily label patient data by hand.  
+\vspace{-4mm}
+% In addition to that, we aim to integrate a referencing feature inside the application that can propose prominent areas that demand strong attention from the experts.
+\vspace{-2mm}
+\end{itemize}
 }\\
 \hline
-\multicolumn{2}{|m{\linewidth}|}{\textbf{Results}:\par
+\multicolumn{2}{|m{\linewidth}|}{\textbf{Expected Results}:\par
 
 % Achieve comparable top rank at FLARE 2022, a challenge of the conference MICCAI 2022
 % Publish paper at MICCAI 2022, possibly representing at the conference.
 % A user-friendly tool for segmenting organs in 3D CT Volumes, which can be used easily by people without technical knowledge.
 % Have good evaluation metric scores in order to be feasibly adapted in practical use.
-
-\lipsum[1]
+%\vspace{-2mm}
+%Hopefully, we expect to achieve results to prove the usability of our methods:
+\vspace{-2mm}
+\begin{itemize}
+    \item An efficient method for organ segmentation for 3D CT volumes.
+    \vspace{-4mm}    
+    \item An annotation tool that can be used easily by people without technical knowledge. 
+    \vspace{-4mm}
+%    \item Publishing the research at MICCAI 2022, and possibly presenting for it at the conference. 
+%    \vspace{-4mm}
+    \item Achieving comparable top rank at FLARE 2022, a challenge of the conference MICCAI 2022
+    \vspace{-8mm}
+\end{itemize}
 % Với hướng tiếp cận semi supervise và active learning, nhóm đã đạt 78% trên tập dữ liệu MICCAI 2022.
 % Sử dụng mô hình lan truyền, tiềm năng cho việc gán nhán sử dụng ít annotation resource hơn, nhóm đã đề xuất mô hình sử dụng ít prior knowledge hơn gấp nhiều lần nhưng kết quả lại vượt qua được mô hình huấn luyện hoàn toàn. 
-
 }\\
 \hline
 
 \multicolumn{2}{|m{\linewidth}|}{
 \textbf{Research timeline}:
+\vspace{-4mm}
 \begin{itemize}
-    
 \item \textbf{January-February 2022}: Conduct research for recent mask propagation methods and the previously related works. Simultaneously, intensively investigate the basics of medical subjects and the prevalent applications of AI in this field.
+\vspace{-4mm}
 \item \textbf{March 2022}: Implement a code template for training and evaluation, try and adapt baseline code from MiVoS, STCN to toy datasets. Search for suitable opening medical challenges from MICCAI 2022’s workshops, results in joining FLARE22.
+\vspace{-4mm}
 \item \textbf{April 2022}: Analyze FLARE22 datasets, experiment splitting, preprocessing, post-processing for the specific 3D volume data, with reference from top solutions of previous challenge. Visualize every step to avoid fatal bugs and errors before fully training.
+\vspace{-4mm}
 \item \textbf{May - June 2022}: Full training and evaluating models while constantly suggesting and implementing improvements for the performance models regarding both accuracy and efficiency.
+\vspace{-4mm}
 \item \textbf{July 2022}: Final submission to FLARE 2022. Develop an application integrated with aforementioned features and AI algorithm. Possibly conduct a number of surveys about the software usability.
+\vspace{-4mm}
 % August 2022: Finish the thesis with analysis and discussion on the experimental results, prepare a presentation, and finalize the code base for submission.
 \end{itemize}
-
-
 }\\
 \hline
 
 \makecell[c]{\textbf{Advisor} \\ 
-\includegraphics[height=1cm]{resources/signatures/pmkhoi.png} \\ Assoc. Prof. Trần Minh Triết } & 
+\includegraphics[height=2cm]{resources/signatures/tmtriet.png} \\ Assoc. Prof. Trần Minh Triết } & 
 
-\makecell[c]{\textbf{December 15\textsuperscript{th}, 2019}\\ \textbf{Author} \\ 
-\includegraphics[height=1cm]{resources/signatures/pmkhoi.png} \\ Phạm Minh Khôi \\ 
-\includegraphics[height=1cm]{resources/signatures/nhtlong.png} \\ Nguyễn Hồ Thăng Long} \\ 
+\makecell[c]{\textbf{May 9\textsuperscript{th}, 2022}\\ \textbf{Students} \\ 
+\includegraphics[height=1.5cm]{content/resources/signatures/pmkhoi.png} \\ Phạm Minh Khôi \\
+\includegraphics[height=1.5cm]{content/resources/signatures/nhtlong.jpeg} \\ Nguyễn Hồ Thăng Long} \\ 
 \hline
 \end{longtable}
 

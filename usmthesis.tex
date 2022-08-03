@@ -111,7 +111,6 @@ tocpage,  % Put ``Page'' at top of ToC. Add lotpage, lofpage if
 \usepackage{bibentry}
 
 
-
 %% Listings is a nice package for typesetting code
 %% listings. Other possible packages include fancyvrb,
 %% minted, etc.
@@ -126,9 +125,11 @@ tocpage,  % Put ``Page'' at top of ToC. Add lotpage, lofpage if
 \usepackage{algorithm}
 \usepackage{indentfirst}
 
+\usepackage[final]{pdfpages}
 
 %% PHAT PLACE
 \usepackage{caption}
+\usepackage{subcaption}
 \usepackage{graphicx}
 % \usepackage{subcaption} ERROR ?
 \usepackage{ulem}
@@ -140,7 +141,7 @@ tocpage,  % Put ``Page'' at top of ToC. Add lotpage, lofpage if
 \author{PHẠM MINH KHÔI - NGUYỄN HỒ THĂNG LONG}
 
 % English title of your thesis
-\title{Smart Medical Assistance\\with Deep Vision}
+\title{Semi-supervised Organ Segmentation\\in 3D Volume with \\Mask-Propagation Refinement}
 % Vietnamese title of your thesis
 % \title{Phát triển giải pháp hỗ trợ y tế thông minh với các thuật toán học sâu trên dữ liệu thị giác}
 % Malay title of your thesis
@@ -251,11 +252,9 @@ bookmarksdepth=section,breaklinks=true]{hyperref}
 \setlength\intextsep{24pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Your Malay and English abstracts, each in one file.
+% Your English abstracts, each in one file.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \input{abs-mal}
-
-
+\input{content/abs-eng}
 \mainmatter
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -295,8 +294,8 @@ bookmarksdepth=section,breaklinks=true]{hyperref}
 % If you don't have any, you may delete everything below,
 % until and including \input{appendices}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\appendix
-\assignpagestyle{\chapter}{empty}
+
+% \assignpagestyle{\chapter}{empty}
 % * If IPS says they don't want any page numbering in the footer,
 %   add \pagestyle{empty}
 % * If they don't want any page numbering in the ToC either,
@@ -305,7 +304,7 @@ bookmarksdepth=section,breaklinks=true]{hyperref}
 %   in the ToC either, add
 %     \addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
 %     \addtocontents{toc}{\texbf{List of Publications}} % (to get it to appear)
-% \input{appendices}
+% \input{content/appendices/appendices}
 % \assignpagestyle{\chapter}{plain}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -313,8 +312,9 @@ bookmarksdepth=section,breaklinks=true]{hyperref}
 % comment out the next 4 lines.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Uncomment/comment this line if you need the List of Publications to be bold/not bold in the ToC.
-\addtocontents{toc}{\protect\renewcommand\protect\cftchapfont{\protect\bfseries}}
-\bibliographyown{references/refs}
+% \addtocontents{toc}{\protect\renewcommand\protect\cftchapfont{\protect\bfseries}}
 
-
+% \bibliographyown{references/refs} % Hinh nhu la cai nay a, cai nay la LOP 
+\appendix
+\import{content/appendices}{app-paper}
 \end{document}

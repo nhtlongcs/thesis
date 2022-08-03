@@ -1,0 +1,23 @@
+\section{Temporal Position Encoding}
+\label{sec:positional_encoding}
+
+After the breakthrough of deep learning in still-image recognition originated with the introduction of the AlexNet model \cite{krizhevsky2012imagenet}, there has been active research devoted to the design of deep networks for a sequence of images. 
+
+Many attempts in the past leverage CNNs trained on images to extract features from the individual frames and then perform temporal integration of such features into a fixed-size descriptor using pooling, high-dimensional feature encoding, or recurrent neural networks. Karpathy et al. \cite{karpathy2014large} presented a thorough study on how to fuse temporal information in CNNs and proposed a “slow fusion” model that extends the connectivity of all convolutional layers in time and computes activations through temporal convolutions in addition to spatial convolutions. Time-series models have also been widely studied in this task to exploit the capabilities of long-term memory features, like LSTM \cite{hochreiter1997long} or GRU \cite{cho2014properties} or most recently, Transformer \cite{vaswani2017attention}. 
+
+However, different from RNN and LSTM, the self-attention inside Transformer cannot capture position information by design. This is critical, considering that the model is otherwise entirely invariant to the sequence order, which is harmful to video encoding.
+
+One common approach is to use position encodings which are combined with input elements to
+expose position information to the model. These position encodings can be a deterministic function of position (\cite{sukhbaatar2015end}; \cite{vaswani2017attention}) or learned representations. 
+Convolutional neural networks inherently capture relative positions within the kernel size of each convolution. They have been shown to still benefit from position encodings (\cite{gehring2017convolutional}), however.
+For the Transformer, which employs neither convolution nor recurrence, incorporating explicit
+representations of position information is an especially important consideration since the model is
+otherwise entirely invariant to sequence order.
+
+To overcome this issue, \cite{jung2020global} adopts relative position embedding \cite{shaw2018self}, which ensures translation-equivariance property and allows the model to generalize unseen sequence length during training. Empirically, \cite{jung2020global}  confirms that relative position indeed helps to capture the sequential properties of video content, improving the video encoder' performance further.
+
+In our work, we implement a simple way to inject the position information into the feature vector for the model to learn, in the hope that the target model will be capable of understanding relatively the location of specific objects within a long sequence, in our case a CT volume.
+
+In fact, looking at the problem of abdomen organ segmentation in CT volume, this position embedding can be seen as a model constraint since any organ of a human only appear in certain areas. Therefore, with the introduction of this information, the model can comprehend the knowledge of organ relative position to make a better prediction. 
+
+Many previous works manipulate model outputs by incorporating conditions to the model inputs or intermediate features. \cite{mirza2014cgan} first introduce encoding label information into both discriminator and generator to control the generation of the image. \cite{messina2021transformer} also has its own way to concatenate encoded bounding-boxes values to the input vector for the model to learn. All these mentioned research uses only simple embedding layers to embed the scalar values, which encourages us to do the same. 

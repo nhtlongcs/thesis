@@ -1,0 +1,83 @@
+% The validation performance (DSC) comparisons between with and without using unlabelled
+% images
+% Visualized examples of successful and failed cases
+% Segmentation efficiency analysis
+% Limitations and future work
+
+\section{Quantitative results}
+\label{sec:quantitative}
+
+Here we present both quantitative and qualitative results of our proposed method. We also include the ablation study (Table \ref{table:ablation_study}) to further analyze the effectiveness of each of our modules. 
+
+\begin{table}[h]
+\centering
+\caption{Comparison between using and not using the pseudo labels as supervised training data. The model that is used for the report is TransUnet \cite{transunet21chen}. The highlighted figures emphasize the highest values in each row. The Dice Scores are reported on the public test set, and are given from the public leaderboard.}
+\footnotesize
+\begin{tabular}{| c | c | c | c | }
+\hline
+\textbf{Number of pseudo-labeled samples} & 0 & 200 & 700  \\
+\hline
+\textbf{Liver} & 0.9141  & 0.9555 & \textbf{0.9604} \\
+\textbf{RK} & 0.645 & 0.7944 & \textbf{0.8014} \\
+\textbf{Spleen} & 0.8071 & 0.9144 & \textbf{0.9255}	\\
+\textbf{Pancreas} & 0.6152 & 0.7309 & \textbf{0.7567}	\\
+\textbf{Aorta} & 0.8992 & 0.9272 & \textbf{0.9335} \\
+\textbf{IVC} & 0.7398 & 0.7967 & \textbf{0.8207} 	\\
+\textbf{RAG} & 0.5786 & 0.6507 & \textbf{0.6545} 	\\
+\textbf{LAG} & 0.4376 & \textbf{0.6179} & 0.6138 	\\
+\textbf{Gallbladder} & 0.474 & \textbf{0.5889} & 0.5885	\\
+\textbf{Esophagus} & 0.74 & \textbf{0.7784} & 0.7783 	\\
+\textbf{Stomach} & 0.7678 & 0.8403 & \textbf{0.8424} 	\\
+\textbf{Duodenum} & 0.4425 & 0.5617 & \textbf{0.5679}	\\
+\textbf{LK} & 0.7015 & \textbf{0.8112} & 0.8026 \\ 
+\textbf{Mean DSC} & 0.674 & 0.7668 & \textbf{0.7728} \\ 
+
+\hline
+\end{tabular}
+\label{table:unlabeled}
+\vspace{-2mm}
+\end{table}
+
+Some interesting insights can be spotted in Table \ref{table:unlabeled}. Overall, we can see that using the pseudo-labeled data for training, helps boost the performance of the model by a great amount. Unfortunately, we have yet to fully explore every unlabeled sample (only 700 samples were used for training in our submission), but intuitively, the number of used unlabeled samples is likely to be directly proportional to the evaluation result. Another notable observation is that the DSC for some small human organs (gallbladder and adrenal glands) can hardly be improved because of the class imbalance problem. %(as referred in \ref{sec:limitation}) 
+
+\begin{table}[h]
+\centering
+\caption{Ablation experiment on each proposed modules and techniques. Scores are reported on the public test set, which in available on the public leaderboard.}
+\footnotesize
+\begin{tabular}{| c | l | c | c | c | c |}
+\hline
+\textbf{No.} & \textbf{CPS} & \textbf{Windowing CT} & \textbf{UE} & \textbf{MP} & \textbf{Mean DSC} \\ 
+\hline
+1  &            &  & & & 0.547   \\
+2  & $\checkmark$ &            &            & & 0.762   \\
+3  & $\checkmark$ & $\checkmark$ & $\checkmark$ & & 0.770   \\
+4  & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & 0.784   \\
+\hline
+\end{tabular}
+\label{table:ablation_study}
+\vspace{-2mm}
+\end{table}
+
+Table \ref{table:ablation_study} shows that each module contributes to the final score of our submission. The third and fourth rows where both Cross Pseudo Supervision (CPS) and Uncertainty Estimation (UE) is used mean that pseudo-labels that are qualified by UE are used as supervised inputs in CPS workflow whereas the remaining unlabeled data are used as unsupervised inputs. Noticeably, in the fourth row, with the Mask propagation (MP) applied, DSC score is enhanced. It is surprising that MP only looks upon the minority of the slices to fully propagate through the whole volume. We recommend looking at the qualitative result in Section \ref{sec:qualitative} to fully understand what each component contributes to the total score. The detailed evaluation for our final submission on the public test set is shown in Table  \ref{table:submission}. 
+
+\begin{table}[h]
+\centering
+\caption{The final evaluation score for our final submission on the public test set}
+\footnotesize
+\begin{tabular}{| c | l | c | c | c | c | c |}
+\hline
+\textbf{Mean DSC} & \textbf{Liver} & \textbf{RK} & \textbf{Spleen} &	\textbf{Pancreas} &	\textbf{Aorta} &	\textbf{IVC} \\
+\hline
+0.7841 &	0.9591 &	0.8149 &	0.9244 &	0.7499 &	0.9383 &	0.8262 \\
+\hline
+\hline
+\textbf{RAG} &	\textbf{LAG} &	\textbf{Gallbladder} &	\textbf{Esophagus} &	\textbf{Stomach} &	\textbf{Duodenum} &	\textbf{LK} \\
+\hline
+0.6456 &	0.601 &	0.6877 &	0.7986 &	0.8446 &	0.5808 &	0.8219   \\
+
+\hline
+\end{tabular}
+\label{table:submission}
+\vspace{-2mm}
+\end{table}
+

@@ -1,0 +1,18 @@
+\section{Results}
+
+With new advancements in technology, there are endless possibilities for what can be achieved. In the medical field, one of the most common problems that doctors face is accurately segmenting 3D objects from 2D images or volume sequences. We propose a novel two-stage pipeline that can leverage the strength of many state-of-the-art 2D deep learning algorithms and techniques in videos and images, into the task of 3D object segmentation. This proposal aims to introduce a novel and inspirational approach to solving one of the most common problems in the medical field. In addition, to break the barrier of differences in medical pipeline processes, our solution is able to transfer and exploit the power of multiple domain data to create more accurate results.
+
+In summary, we enhance the initial results by presenting the application of new techniques and modules:
+
+\begin{itemize}
+    \item The semi-supervised Cross Pseudo Supervision module helps to exploit the enormous amount of unlabeled data successfully. According to our ablation study, with the usage of only a quarter of the unlabeled source, the validation results were boosted significantly. Additionally, this module also contributes to the pseudo-labeling stage to generate more data for other module to learn.
+    
+    \item The Propagation module which inherit the power of STCN model with some modification for adaptation. By using this module, the initial results were refined to obtain better masks. This module can also be attached to the annotation tool with ease and efficiency. However, its performance is strictly dependent on the precision of the previous stage, which is the Reference module. 
+    
+    \item The rational uncertainty estimation approach for the pseudo-labeling process, which helps the process becomes more explainable and productive. Despite that, its simplicity allows it to be further analyzed and upgraded in the future.  
+
+\end{itemize}
+
+On top of that, we also come up with a user-friendly annotation tool that provides support and guidance for doctor to quickly generate usable data for the medical field. 
+
+Although our research shows improvements over traditional 2D methods, it still cannot be comparable to other 3D methods, as can be seen on the leaderboard of FLARE22 challenge, since those methods can comprehend the dimensional information of a full CT volume. Officially, our method achieves the final result of 0.78 DSC. Still, our method does introduce a novel approach yet promising one and can be further developed in the future.

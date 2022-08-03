@@ -20,6 +20,13 @@ Interestingly, \cite{yoo2019learningloss} train an additional regression module,
 
 The majority of empirical results from previous researches suggest that active learning is actually reducing the annotation cost. The problem is that most of methods require task-specific design or are not efficient in the recent deep networks.
 
-As a task-agnostic uncertainty approach, \cite{seung1992query}, \cite{beluch2018power} train multiple models to construct a committee, and measure the consensus between the multiple predictions from the committee.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{content/resources/new_images/related_works/pdices.pdf}
+    \caption{A pipeline for active learning proposed in \cite{wang2019twostagequery}, which calculate unlabeled sample score through the two-step query strategy: P-Dices and SAF}
+    \label{fig:pdices}
+\end{figure}
 
-We follow \cite{beluch2018power} to use deep ensemble to generate prediction for each unlabeled sample, then based on consensus entropy to select good samples. While previous works aim at finding the most uncertain samples to be manually labeled by experts, but in our context, manual annotation is forbidden, therefore we try to find most certain samples that can be used for retraining.
+As a task-agnostic uncertainty approach, \cite{seung1992query}, \cite{beluch2018power} train multiple models to construct a committee, and measure the consensus between the multiple predictions from the committee. \cite{wang2019twostagequery} goes with the same strategy where the authors compute the entropy between numerous trained agents, as depicted in Figure \ref{fig:pdices}.
+
+We follow \cite{wang2019twostagequery} to use deep ensemble to generate prediction for each unlabeled sample, then based on consensus entropy to select good samples. While previous works aim at finding the most uncertain samples to be manually labeled by experts, but in our context, manual annotation is forbidden, therefore we try to find most certain samples that can be used for retraining.
