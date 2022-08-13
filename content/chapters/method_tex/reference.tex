@@ -15,11 +15,8 @@ CPS enables the usage of unlabeled data by following the dual students technique
 
 We adopt two prominent state-of-the-arts 2D segmentation models with highly different learning paradigms for this CPS framework, which is TransUNet \cite{transunet21chen} and DeeplabV3+ \cite{dlv3p18chen}. While DeeplabV3+ traditionally focuses more on the local information, transformers model the long-range relation, so the cross training can help to learn a unified segmenter with these two properties at the same time. In short, we choose TransUNet and DeeplabV3+ due to their ability to compensate each other for better performance \cite{luo2021semisupervised}. 
 
-In order for the model to make use of the order of the sequence, we need to inject somne information about the position of the frames. For simplicity, we add an additional embedding layer to embed the relative position of the frame. Specifically, the embedded position index is concatenated with the hidden features before the final segmentation head. The relative position of $k^{th}$ frame of CT volume $i$ with length $T_i$ is calculated as:
+\input{content/chapters/method_tex/pe}
 
-\begin{align}
-        PE(k) &= \frac{k}{T_i}
-\end{align}
 
 In addition, we also propose a both logical and specialist-based strategy to choose which slices can be further used to boost the performance of the Propagation module. The goal of this action is to preserve only some of the most useful information for the refinement stage.
 

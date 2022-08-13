@@ -13,10 +13,10 @@ Given y the ground truth mask, and \hat{y} the predicted mask of the model, we r
 The Dice coefficient is widely used metric in computer vision community to calculate the similarity between two matrices. In recent years, it has also been adapted as loss function known as Dice Loss \cite{sudre2017diceloss}
 
 \begin{align}
-        DL (y, \hat{y}) &= 1 - \frac{2xy+\epsilon}{x+y+\epsilon}
+        DL (y, \hat{y}) &= 1 - \frac{2\hat{y}y+\epsilon}{\hat{y}+y+\epsilon}
 \end{align}
 
-Here, $\epsilon$ is added in both numerator and denominator to ensure that the function is not undefined in edge case scenarios such as when $x = y = 0$.
+Here, $\epsilon$ is added in both numerator and denominator to ensure that the function is not undefined in edge case scenarios such as when $\hat{y} = y = 0$.
 
 \textbf{Cross-entropy loss}
 
